@@ -1,0 +1,19 @@
+--ITA--
+OMORI, con tutto il relativo materiale, è di proprietà di OMOCAT e del suo team. Questo progetto non è assolutamente a fini di lucro, e il nostro è un team di fan volontari che desidera solamente rendere questo bellissimo gioco più accessibile ad un pubblico italiano.
+
+Ciao! Questo è un progetto non ufficiale di traduzione in italiano del videogioco OMORI di OMOCAT, disponibile su Steam. Dato che l'unica localizzazione ufficiale ad essere stata annunciata è quella giapponese, è sorta una serie di progetti di traduzione in altre lingue fatti dai fan, e questo è uno dei tanti. Di base la traduzione è una mod da utilizzare con Gilbert's Mod Loader, anche chiamato GOMORI. (ATTENZIONE: Una volta installato GOMORI, il gioco non sarà più avviabile da OMORI.exe, ma dovrete aprirlo dalla libreria di Steam. Perciò avrete bisogno di una copia del gioco LEGITTIMA su Steam.)
+
+15/04/2021 - AUGURI CLAUS! Attualmente abbiamo quasi completato l’intera traduzione di OMORI. Mancano infatti solo alcune immagini e varie correzioni per rimuovere definitivamente gli errori di scrittura rimasti. Per maggiori informazioni o per qualsiasi domanda vi consigliamo di unirvi al gruppo DISCORD di cui trovate l’invito in fondo alla pagina :)
+
+
+
+
+--ENG--
+OMORI, with all its relative assets, is property of OMOCAT and her team. We are absolutely not profiting off of this project, and ours is a team of volunteer fans who just wish to make this beautiful game more accessible to an Italian public.
+
+Hi! This is an unofficial Italian translation project of the videogame OMORI by OMOCAT, available on Steam. Since the only official localization that got announced is the Japanese one, a series of fanmade translation projects popped up, and this is one of many. Our translation is basically a mod to be used with Gilbert's Mod Loader, also known as GOMORI. (NOTE: Once you install GOMORI, you won't be able to start the game by opening OMORI.exe anymore, and instead you'll have to open it from your Steam library. So, you're going to need a LEGIT copy of the game on Steam.)
+
+15/04/2021 - HAPPY BDAY CLAUS! Currently we have almost completed the OMORI translation. In fact, only some images and various corrections to remove writing mistakes are missing. For more information or for any question we suggest you to join the DISCORD server of which you find the invite at the end of the page.
+
+
+

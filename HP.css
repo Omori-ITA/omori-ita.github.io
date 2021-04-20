@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e7e7e7;
+    background-image: url("res/omori_sky.gif");
+    background-repeat: revert;
+
+/*    font-family: "Raleway", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1em;*/
+}
+
+.container{
+    padding-top: 25px;
+    line-height: 1.5;
+}
+
+.header{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: white;
+    width: fit-content;
+}
+
+#lightbulb{
+    max-height: 143px;
+    max-width: 170px;
+}
+
+.header a{
+    display: flex;
+}
+
+.header a img{
+    max-width: 64px;
+    max-height: 64px;
+}
+
+#swap-language{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 1265px;
+    top: -158px;
+    width: fit-content;
+}
+
+.true-logo{
+    display: flex;
+    flex-direction: column;
+}
+
+.true-logo #italian{
+    position: relative;
+    top: -14px;
+}
+
+
+
+#twitter{
+    padding: 0px 10px 10px 10px;
+}
+
+#discord {
+    padding: 0px 10px 0px 10px;
+}
+
+.container-button-downloads{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.container-button-downloads a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.btn{
+    border-radius: 15px;
+    border-color: black;
+    background-color: white;
+    border-style: solid;
+    border-width: 10px;
+}
+
+.btn:hover{
+    background-color: #e7e7e7;
+    /*AGGIUNGERE ANIMAZIONI*/
+}
+
+#swap-btn{
+    min-width: 245px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+    cursor: pointer;
+}
+
+.disclaimer-section{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    margin: auto;
+    width: 730px;
+    grid-template-rows: 35% 65%;
+    background-color: white;
+}
+
+.disclaimer-section h1{
+    padding-top: 10px;
+    grid-column: 2;
+    text-align: center;
+}
+
+.disclaimer-section p{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+.img-screenshot{
+width: 350px;
+height: 262px;
+}
+
+
+
