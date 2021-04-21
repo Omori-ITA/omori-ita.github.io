@@ -13,21 +13,21 @@
 
   <body>
 
-  <div id="swap-language">
-    <p id="lang">ITA</p> <!--Swap di lingua al tocco del pulsante-->
-    <button id="dark-mode" onclick="darkMode()"> <img id="lightbulb" src="res/lightbulb_Omori.gif"/> </button>
-    <button id="swap-btn" onclick="swap_lang()">CLICK HERE TO CHANGE LANGUAGE</button>
-  </div>
+    <div id="swap-language">
+      <p id="lang">ITA</p> <!--Swap di lingua al tocco del pulsante-->
+      <button id="dark-mode" onclick="darkMode()"> <img id="lightbulb" src="res/lightbulb_Omori.gif"/> </button>
+      <button id="swap-btn" onclick="swap_lang(false)">CLICK HERE TO CHANGE LANGUAGE</button>
+    </div>
+
     <main class="container">
 
       <div id="modal">
         <div class="modal-header">
-          <div class="title">ESEMPIO</div>
+          <div class="title">DISCLAIMER</div>
           <button class="close-button" onclick="confirm(false)">&times;</button>
+          <button id="swap-lang-modal" onclick="swap_lang(true)">🇮🇹</button>
         </div>
-        <div class="modal-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet animi asperiores assumenda commodi, dolor ea earum eos fuga harum illum ipsam iure libero natus optio praesentium quaerat quia quo recusandae temporibus ullam vero voluptatem voluptatibus! A cupiditate, explicabo ipsa iusto nam natus non officia quisquam quos, rem rerum veritatis?
-        </div>
+        <div ID="modal-body"></div>
         <button id="confirm" onclick="confirm(true)">Accept</button>
       </div>
 
@@ -45,12 +45,9 @@
         <a id="discord" href="https://discord.gg/DcPUz9zmbT"> <img src="res/discord.png"/> </a>
       </div>
 
-
-
-
       <script type="text/javascript" defer>
         document.addEventListener('DOMContentLoaded', function() {
-          load_txt();
+          load_page();
           showDisclaimer();
         }, false);
       </script>
@@ -58,10 +55,10 @@
 
 
       <!--SEZIONE DISCLAIMER - FATTA-->
-      <div class="container-info" id="disclaimer-section">
+<!--      <div class="container-info" id="disclaimer-section">
         <h1>DISCLAIMER</h1>
         <p id="disclaimer"></p>
-      </div>
+      </div>-->
 
       <!--SEZIONE PULSANTI DOWNLOAD - FATTA-->
       <div class="container-button-downloads">
@@ -96,12 +93,10 @@
           <div id="colonna0"></div>
           <div id="colonna1"></div>
         </div>
-
       </div>
 
-
-
     </main>
+
   </body>
   <style>
   </style>

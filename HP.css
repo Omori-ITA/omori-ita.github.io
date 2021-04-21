@@ -33,6 +33,10 @@ body button{
     background-color: white;
 }
 
+#lang{
+    display: none;
+}
+
 .header{
     display: flex;
     margin: auto;
@@ -266,7 +270,7 @@ body button{
     font-weight: bold;
 }
 
-.modal-body{
+#modal-body{
     padding: 10px 15px;
 }
 
