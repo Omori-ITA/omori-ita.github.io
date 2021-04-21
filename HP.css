@@ -40,7 +40,7 @@ body button{
     justify-content: center;
     border-radius: 5px;
     background-color: white;
-    width: fit-content;
+    width: min-content;
 }
 
 #lightbulb{
@@ -66,7 +66,7 @@ body button{
     position: sticky;
     left: 90%;
     top: 0px;
-    width: fit-content;
+    width: min-content;
     z-index: 100;
 }
 #dark-mode{
