@@ -1,9 +1,13 @@
+var ita_array = []
+var eng_array = []
 
 async function swap_lang() {
-    var text = await load_page("ENG");
-    console.log(text)
+    /*var text = await load_page("ENG");*/
+    /*console.log(text)*/
 
-    if (lang == "ITA"){
+    console.log(ita_array)
+
+   /* if (lang == "ITA"){
 
         document.getElementById('swap-btn').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
         document.getElementById('lang').innerText = "ENG";
@@ -14,9 +18,9 @@ async function swap_lang() {
 
 
 
-        /*Posizione 0 per disclaimer*/
+        /!*Posizione 0 per disclaimer*!/
         document.getElementById('disclaimer').innerText = text[0];
-        /*Posizione 1 per progetto*/
+        /!*Posizione 1 per progetto*!/
         document.getElementById('project').innerText = text[1];
 
         document.getElementById('date').innerText = text[2].split(" - ")[0];
@@ -24,32 +28,41 @@ async function swap_lang() {
     }
 
     else{
-        /*var text = await load_page("ITA");*/
+        /!*var text = await load_page("ITA");*!/
         document.getElementById('swap-btn').innerText = "CLICK HERE TO CHANGE LANGUAGE";
         document.getElementById('lang').innerText = "ITA";
 
         document.getElementById('project-title').innerText = "IL PROGETTO";
         document.getElementById('news').innerText = "AGGIORNAMENTI";
-        document.getElementById('title-trailer').innerText = "GUARDA IL TRAILER DELLA BETA 0.0.3!"
+        document.getElementById('title-trailer').innerText = "GUARDA IL TRAILER DELLA BETA 0.0.3!"*/
 
-        /*Posizione 0 per disclaimer*/
+/*        /!*Posizione 0 per disclaimer*!/
         document.getElementById('disclaimer').innerText = text[0];
-        /*Posizione 1 per progetto*/
+        /!*Posizione 1 per progetto*!/
         document.getElementById('project').innerText = text[1];
 
         document.getElementById('date').innerText = text[2].split(" - ")[0];
-        document.getElementById('novita').innerText = text[2].split(" - ")[1];
-    }
+        document.getElementById('novita').innerText = text[2].split(" - ")[1];*/
+ /*   }*/
 
 }
 
-async function load_page(lang) {
+async function load_txt() {
 
-    var ita = [];
-    var eng = [];
+    var text;
 
     await $.get('res/paragraph/file_ita_eng.txt', function (data) {
-        var content_file = data.split("\n");
+        text  = data;
+        stringConverter(text);
+    }, 'text');
+
+    loadImage();
+
+
+}
+
+function stringConverter(text) {
+        var content_file = text.split("\n");
 
         var flag_ita = false;
         var flag_eng = false;
@@ -70,83 +83,21 @@ async function load_page(lang) {
                 }
 
                 if(flag_ita)
-                    ita.push(content_file[i]);
+                    ita_array.push(content_file[i]);
 
                 if(flag_eng)
-                    eng.push(content_file[i]);
-
+                    eng_array.push(content_file[i]);
             }
         }
 
-        /*/!*Posizione 0 per disclaimer*!/*/
-        document.getElementById('disclaimer').innerText = ita[0];
-        /*/!*Posizione 1 per progetto*!/*/
-        document.getElementById('project').innerText = ita[1];
-        /*/!*Posizione 2 per AGGIORNAMENTI*!/*/
-        document.getElementById('date').innerText = ita[2].split(" - ")[0];
-        document.getElementById('novita').innerText = ita[2].split(" - ")[1];
+    document.getElementById('disclaimer').innerText = ita_array[0];
+    /*/!*Posizione 1 per progetto*!/*/
+    document.getElementById('project').innerText = ita_array[1];
 
-        if( lang == "ITA")
-            return ita;
+    document.getElementById('date').innerText = ita_array[2].split(" - ")[0];
+    document.getElementById('novita').innerText = ita_array[2].split(" - ")[1];
 
-        else
-            return eng;
-
-    }, 'text');
 }
-
-/*
-    await $.getJSON('res/paragraph/file_ita_eng.txt', function (file){
-
-        console.log(content_file);
-        var flag_ita = false;
-       var flag_eng = false;
-
-       for (var i = 0; i < content_file.length; i++) {
-           if(content_file[i] != "\r" && content_file[i] != ""){
-
-               if(content_file[i] == "--ITA--\r"){
-                   flag_ita = true;
-                   flag_eng = false;
-                   continue;
-               }
-
-               if(content_file[i] == "--ENG--\r"){
-                   flag_eng = true;
-                   flag_ita = false;
-                   continue;
-               }
-
-               if(flag_ita)
-                   ita.push(content_file[i]);
-
-               if(flag_eng)
-                   eng.push(content_file[i]);
-
-           }
-       }
-
-        /!*Posizione 0 per disclaimer*!/
-        document.getElementById('disclaimer').innerText = ita[0];
-        /!*Posizione 1 per progetto*!/
-        document.getElementById('project').innerText = ita[1];
-        /!*Posizione 2 per AGGIORNAMENTI*!/
-        document.getElementById('date').innerText = ita[2].split(" - ")[0];
-        document.getElementById('novita').innerText = ita[2].split(" - ")[1];
-
-
-
-        if( lang == "ITA")
-            return ita;
-
-        else
-            return eng;
-*/
-
-/*        loadImage();
-    });
-
-}*/
 
 function loadImage() {
     var card = document.createElement('div');
