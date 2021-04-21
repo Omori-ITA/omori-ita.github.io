@@ -1,10 +1,9 @@
 
 async function swap_lang() {
-    /*var text = await load_page("ENG");*/
     var lang = document.getElementById('lang').textContent;
 
     if (lang == "ITA"){
-
+        var text = await load_page("ENG");
         document.getElementById('swap-btn').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
         document.getElementById('lang').innerText = "ENG";
 
@@ -24,7 +23,7 @@ async function swap_lang() {
     }
 
     else{
-        /*var text = await load_page("ITA");*/
+        var text = await load_page("ITA");
         document.getElementById('swap-btn').innerText = "CLICK HERE TO CHANGE LANGUAGE";
         document.getElementById('lang').innerText = "ITA";
 
@@ -43,15 +42,14 @@ async function swap_lang() {
 
 }
 
-/*async function load_page(lang){
+async function load_page(lang){
 
     var ita = [];
     var eng = [];
 
-    await $.getJSON('res/paragraph/file_ita_eng.txt', function (file){
+    await $.get('res/paragraph/file_ita_eng.txt', function (file){
        var content_file = file.split("\n");
-        console.log(content_file);
-        var flag_ita = false;
+       var flag_ita = false;
        var flag_eng = false;
 
        for (var i = 0; i < content_file.length; i++) {
@@ -77,86 +75,26 @@ async function swap_lang() {
 
            }
        }
-
-        /!*Posizione 0 per disclaimer*!/
-        document.getElementById('disclaimer').innerText = ita[0];
-        /!*Posizione 1 per progetto*!/
-        document.getElementById('project').innerText = ita[1];
-        /!*Posizione 2 per AGGIORNAMENTI*!/
-        document.getElementById('date').innerText = ita[2].split(" - ")[0];
-        document.getElementById('novita').innerText = ita[2].split(" - ")[1];
-
-
-
-        if( lang == "ITA")
-            return ita;
-
-        else
-            return eng;
-
-        loadImage();
     });
-
-}*/
-
-/*SCRITTURA FUNZIONE GENERALE*/
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("text/plain");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
-
-/*CHIAMATA FUNZIONE CON SCRITTURA FUNZIONE CALLBACK (questa che vedi è la funzione di callback)*/
-readTextFile("res/paragraph/file_ita_eng.txt", function(file){
-
-    var ita = [];
-    var eng = [];
-
-    var content_file = file.split("\n");
-
-    var flag_ita = false;
-    var flag_eng = false;
-
-    for (var i = 0; i < content_file.length; i++) {
-        if(content_file[i] != "\r" && content_file[i] != ""){
-
-            if(content_file[i] == "--ITA--\r"){
-                flag_ita = true;
-                flag_eng = false;
-                continue;
-            }
-
-            if(content_file[i] == "--ENG--\r"){
-                flag_eng = true;
-                flag_ita = false;
-                continue;
-            }
-
-            if(flag_ita)
-                ita.push(content_file[i]);
-
-            if(flag_eng)
-                eng.push(content_file[i]);
-        }
-    }
 
     /*Posizione 0 per disclaimer*/
     document.getElementById('disclaimer').innerText = ita[0];
     /*Posizione 1 per progetto*/
     document.getElementById('project').innerText = ita[1];
+    console.log(ita[0])
     /*Posizione 2 per AGGIORNAMENTI*/
     document.getElementById('date').innerText = ita[2].split(" - ")[0];
     document.getElementById('novita').innerText = ita[2].split(" - ")[1];
 
     loadImage();
 
-});
+    if( lang == "ITA")
+    return ita;
+
+    else
+        return eng;
+
+}
 
 function loadImage() {
     var card = document.createElement('div');
