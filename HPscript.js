@@ -1,9 +1,9 @@
 
 async function swap_lang() {
-    var lang = document.getElementById('lang').textContent;
+    /*var text = await load_page("ENG");*/
 
     if (lang == "ITA"){
-        var text = await load_page("ENG");
+
         document.getElementById('swap-btn').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
         document.getElementById('lang').innerText = "ENG";
 
@@ -23,7 +23,7 @@ async function swap_lang() {
     }
 
     else{
-        var text = await load_page("ITA");
+        /*var text = await load_page("ITA");*/
         document.getElementById('swap-btn').innerText = "CLICK HERE TO CHANGE LANGUAGE";
         document.getElementById('lang').innerText = "ITA";
 
@@ -42,14 +42,21 @@ async function swap_lang() {
 
 }
 
-async function load_page(lang){
+async function load_page(lang) {
 
     var ita = [];
     var eng = [];
 
-    await $.get('res/paragraph/file_ita_eng.txt', function (file){
+    $.get('res/paragraph/file_ita_eng.txt', function (data) {
+        console.log(data);
+    }, 'text');
+}
+
+/*
+    await $.getJSON('res/paragraph/file_ita_eng.txt', function (file){
        var content_file = file.split("\n");
-       var flag_ita = false;
+        console.log(content_file);
+        var flag_ita = false;
        var flag_eng = false;
 
        for (var i = 0; i < content_file.length; i++) {
@@ -75,26 +82,28 @@ async function load_page(lang){
 
            }
        }
+
+        /!*Posizione 0 per disclaimer*!/
+        document.getElementById('disclaimer').innerText = ita[0];
+        /!*Posizione 1 per progetto*!/
+        document.getElementById('project').innerText = ita[1];
+        /!*Posizione 2 per AGGIORNAMENTI*!/
+        document.getElementById('date').innerText = ita[2].split(" - ")[0];
+        document.getElementById('novita').innerText = ita[2].split(" - ")[1];
+
+
+
+        if( lang == "ITA")
+            return ita;
+
+        else
+            return eng;
+*/
+
+/*        loadImage();
     });
 
-    /*Posizione 0 per disclaimer*/
-    document.getElementById('disclaimer').innerText = ita[0];
-    /*Posizione 1 per progetto*/
-    document.getElementById('project').innerText = ita[1];
-    console.log(ita[0])
-    /*Posizione 2 per AGGIORNAMENTI*/
-    /*document.getElementById('date').innerText = ita[2].split(" - ")[0];*/
-    document.getElementById('novita').innerText = ita[2].split(" - ")[1];
-
-    loadImage();
-
-    if( lang == "ITA")
-    return ita;
-
-    else
-        return eng;
-
-}
+}*/
 
 function loadImage() {
     var card = document.createElement('div');
