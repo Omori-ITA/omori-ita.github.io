@@ -4,78 +4,100 @@
     <meta charset="utf-8">
     <title>OmoriITA Project</title>
     <meta name="google-site-verification" content="oYGM8Yt0vP8EMIimj1Ir2b7i3uPjFk2AP82nsEXKylg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="HP.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="HPscript.js"></script>
   </head>
+
+
   <body>
+
+  <div id="swap-language">
+    <p id="lang">ITA</p> <!--Swap di lingua al tocco del pulsante-->
+    <button id="dark-mode" onclick="darkMode()"> <img id="lightbulb" src="res/lightbulb_Omori.gif"/> </button>
+    <button id="swap-btn" onclick="swap_lang()">CLICK HERE TO CHANGE LANGUAGE</button>
+  </div>
     <main class="container">
+
+      <div id="modal">
+        <div class="modal-header">
+          <div class="title">ESEMPIO</div>
+          <button class="close-button" onclick="confirm(false)">&times;</button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet animi asperiores assumenda commodi, dolor ea earum eos fuga harum illum ipsam iure libero natus optio praesentium quaerat quia quo recusandae temporibus ullam vero voluptatem voluptatibus! A cupiditate, explicabo ipsa iusto nam natus non officia quisquam quos, rem rerum veritatis?
+        </div>
+        <button id="confirm" onclick="confirm(true)">Accept</button>
+      </div>
+
+      <div id="overlay"></div>
 
       <!--LOGO SITO E PULSANTI SOCIAL-->
       <div class="header">
         <a id="twitter" href="https://twitter.com/OmoriITA"> <img src="res/twitter.png"/> </a>
 
         <div class="true-logo">
-          <img src="res/Omori_Logo.webp"/>
+          <img id="big-logo" src="res/Omori_Logo.webp"/>
           <img id="italian" src="res/logohtml.png"/>
         </div>
 
         <a id="discord" href="https://discord.gg/DcPUz9zmbT"> <img src="res/discord.png"/> </a>
       </div>
 
-      <div id="swap-language">
-        <p id="lang">ITA</p> <!--Swap di lingua al tocco del pulsante-->
-        <img id="lightbulb" src="res/lightbulb_Omori.gif"/>
-        <button id="swap-btn" onclick="swap_lang()">CLICK HERE TO CHANGE LANGUAGE</button>
-      </div>
+
 
 
       <script type="text/javascript" defer>
         load_page();
+        showDisclaimer();
       </script>
 
 
 
-      <!--SEZIONE DISCLAIMER-->
-      <div class="disclaimer-section">
+      <!--SEZIONE DISCLAIMER - FATTA-->
+      <div class="container-info" id="disclaimer-section">
         <h1>DISCLAIMER</h1>
         <p id="disclaimer"></p>
       </div>
 
-      <!--SEZIONE PULSANTI DOWNLOAD-->
+      <!--SEZIONE PULSANTI DOWNLOAD - FATTA-->
       <div class="container-button-downloads">
         <a href=""> <div class="btn">Download Installer Windows</div> </a>
         <a href=""> <div class="btn">Download Installer MAC</div> </a>
         <a href=""> <div class="btn">Download Cartella MOD</div> </a>
       </div>
 
-      <!--SEZIONE SPIEGAZIONE PROGETTO-->
-      <div class="about-project">
+      <!--SEZIONE SPIEGAZIONE PROGETTO - FATTA -->
+      <div class="container-info" id="about-project">
         <h1 id="project-title">IL PROGETTO</h1>
         <p id="project" class="project-ita"></p>
+      </div>
 
-        <h1 id="news">NOVITÀ</h1>
+      <!--SEZIONE NUOVE INFORMAZIONI - FATTA-->
+      <div class="container-info" id="new-news">
+        <h1 id="news">AGGIORNAMENTI</h1>
         <h2 id="date"></h2>
         <p id="novita"></p>
       </div>
 
-      <h1>Trailer beta 0.03</h1>
-      <div class="trailer-yt">
-        <iframe src="https://www.youtube.com/embed/TWdHF9YPreQ" width="640" height="480"></iframe>
+      <div id="section-trailer">
+        <h1 id="title-trailer">GUARDA IL TRAILER DELLA BETA 0.0.3!</h1>
+        <iframe id="trailer-yt" src="https://www.youtube.com/embed/TWdHF9YPreQ" width="640" height="480"></iframe>
       </div>
+
 
       <!--SEZIONE SCREENSHOOT-->
       <div class="container-screenshot">
         <h1>SCREENSHOT</h1>
-          <div class="gallery">
-            <img class="img-screenshot" src="res/screenshot/Cattura2.PNG"/>
-            <img class="img-screenshot" src="res/screenshot/Cattura1.PNG"/>
-            <img class="img-screenshot" src="res/screenshot/Cattura.PNG"/>
-            <img class="img-screenshot" src="res/screenshot/Cattura2.PNG"/>
-            <img class="img-screenshot" src="res/screenshot/Cattura1.PNG"/>
-            <img class="img-screenshot" src="res/screenshot/Cattura.PNG"/>
-          </div>
+        <div id="gallery">
+          <div id="colonna0"></div>
+          <div id="colonna1"></div>
+        </div>
+
       </div>
+
+
 
     </main>
   </body>

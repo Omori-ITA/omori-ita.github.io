@@ -1,21 +1,36 @@
 *{
     margin:0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "omoriFont";
+    font-style: normal;
+    font-weight: 400;
+    src: url("res/font/MyUglyHandwriting-Regular.otf");
+}
+
+
 body{
+    margin: auto;
     background-color: #e7e7e7;
     background-image: url("res/omori_sky.gif");
     background-repeat: revert;
+    font-family: omoriFont, OMORI_GAME, OMORI_GAME2;
+}
 
-/*    font-family: "Raleway", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1em;*/
+body button{
+    font-family: omoriFont, OMORI_GAME, OMORI_GAME2;
+    font-weight: 600;
 }
 
 .container{
-    padding-top: 25px;
+    margin: -207px auto;
+    width: 80%;
+    /* margin: auto; */
+    /* padding-top: 25px; */
     line-height: 1.5;
+    background-color: white;
 }
 
 .header{
@@ -31,7 +46,9 @@ body{
 #lightbulb{
     max-height: 143px;
     max-width: 170px;
+    position: sticky;
 }
+
 
 .header a{
     display: flex;
@@ -46,20 +63,35 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    left: 1265px;
-    top: -158px;
+    position: sticky;
+    left: 90%;
+    top: 0px;
     width: fit-content;
+    z-index: 100;
 }
+#dark-mode{
+    background-color: transparent;
+    border-color: transparent;
+}
+
 
 .true-logo{
     display: flex;
     flex-direction: column;
+    max-height: 143px;
+    -webkit-filter: invert(0%);
+
+}
+
+.true-logo #big-logo{
+    transition: -webkit-filter 1s ease-in;
 }
 
 .true-logo #italian{
     position: relative;
     top: -14px;
+    /*Per il black space*/
+    -webkit-filter: invert(0%);
 }
 
 
@@ -75,7 +107,8 @@ body{
 .container-button-downloads{
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .container-button-downloads a{
@@ -98,7 +131,7 @@ body{
 }
 
 #swap-btn{
-    min-width: 245px;
+    max-width: 110px;
     margin-top: 10px;
     border-radius: 5px;
     border-width: 2px;
@@ -106,22 +139,31 @@ body{
     cursor: pointer;
 }
 
-.disclaimer-section{
+.container-info{
     display: grid;
     grid-template-columns: 30% 40% 30%;
     margin: auto;
     width: 730px;
     grid-template-rows: 35% 65%;
     background-color: white;
+    padding-bottom: 20px;
 }
 
-.disclaimer-section h1{
+#disclaimer-section{
+    margin-top: -45px;
+}
+
+#new-news{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.container-info h1{
     padding-top: 10px;
     grid-column: 2;
     text-align: center;
 }
-
-.disclaimer-section p{
+.container-info p{
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row: 2;
@@ -129,10 +171,136 @@ body{
     text-align: center;
 }
 
-.img-screenshot{
-width: 350px;
-height: 262px;
+.container-info h2{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    top: 8px;
+    padding-right: 20px
 }
+
+#section-trailer {
+    display: grid;
+    margin: auto;
+    width: 730px;
+    grid-template-rows: 10% 90%;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+#section-trailer h1{
+    margin: auto;
+    text-align: center;
+}
+
+#trailer-yt{
+    margin: auto;
+}
+
+.container-screenshot{
+
+    background-color: white;
+    margin: 50px auto;
+}
+
+#gallery{
+    display: flex;
+
+}
+
+.container-screenshot h1{
+    text-align: center;
+}
+
+#gallery div{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.container-screenshot img{
+    /*AUMENTA GRANDEZZA IMMAGINE*/
+    width: 350px;
+    height: 262px;
+    padding: 25px;
+}
+
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: -webkit-filter 5s ease-in;
+    transform: translate(-50%, -50%) scale(0);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+
+}
+
+.modal-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button{
+   cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body{
+    padding: 10px 15px;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    pointer-events:none;
+    z-index: 1;
+    transition: -webkit-filter 5s ease-in;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*
+@media ( max-width: 1400px ) {
+    #swap-language{
+        left: 1100px;
+    }
+}
+
+@media ( max-width: 1024px ) {
+    #swap-language{
+        left: 1100px;
+    }
+}
+*/
 
 
 

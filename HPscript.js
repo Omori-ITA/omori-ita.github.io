@@ -4,11 +4,12 @@ async function swap_lang() {
 
     if (lang == "ITA"){
         var text = await load_page("ENG");
+        document.getElementById('swap-btn').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
         document.getElementById('lang').innerText = "ENG";
 
         document.getElementById('project-title').innerText = "THE PROJECT";
         document.getElementById('news').innerText = "NEWS";
-        document.getElementById('swap-btn').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
+        document.getElementById('title-trailer').innerText = "WATCH THE BETA 0.0.3 TRAILER!";
 
 
 
@@ -27,7 +28,8 @@ async function swap_lang() {
         document.getElementById('lang').innerText = "ITA";
 
         document.getElementById('project-title').innerText = "IL PROGETTO";
-        document.getElementById('news').innerText = "NOVITÀ";
+        document.getElementById('news').innerText = "AGGIORNAMENTI";
+        document.getElementById('title-trailer').innerText = "GUARDA IL TRAILER DELLA BETA 0.0.3!"
 
         /*Posizione 0 per disclaimer*/
         document.getElementById('disclaimer').innerText = text[0];
@@ -79,9 +81,11 @@ async function load_page(lang){
     document.getElementById('disclaimer').innerText = ita[0];
     /*Posizione 1 per progetto*/
     document.getElementById('project').innerText = ita[1];
-    /*Posizione 2 per novità*/
+    /*Posizione 2 per AGGIORNAMENTI*/
     document.getElementById('date').innerText = ita[2].split(" - ")[0];
     document.getElementById('novita').innerText = ita[2].split(" - ")[1];
+
+    loadImage();
 
     if( lang == "ITA")
     return ita;
@@ -90,3 +94,63 @@ async function load_page(lang){
         return eng;
 
 }
+
+function loadImage() {
+    var card = document.createElement('div');
+    for (var i = 0; i < 6; i++) {
+        var img = document.createElement('img');
+        img.src = "res/screenshot/Cattura" + i + ".PNG";
+
+        document.getElementById("colonna" + i % 2).appendChild(img);
+    }
+}
+
+/*DA COMPLETARE PER TORNARE ALLA WHITE MODE MA FUNZIONA*/
+function darkMode() {
+
+    $("#lightbulb").attr("src", "res/unnamed.gif");
+
+    $("#italian").css({
+        "webkit-filter" : "invert(100%)"
+    });
+
+    $("#big-logo").css({
+        "webkit-filter" : "invert(100%)"
+    });
+}
+
+function showDisclaimer() {
+    let saveChoice = localStorage.getItem('preference');
+
+    if(!saveChoice){
+    /*Se preferenza non c'e', visualizza il modal*/  /*attivo l'opacità'*/
+
+        $("#modal").css({
+            "transform": "translate(-50%, -50%) scale(1)"
+        });
+
+        $("#overlay").css({
+            "pointer-events" : "all",
+            "opacity": "1"
+        });
+
+    }
+}
+
+function confirm(flag) {
+    if(flag){
+        localStorage.setItem('preference', true);
+    }
+
+    $("#modal").css({
+        "transform": "translate(-50%, -50%) scale(0)"
+    });
+
+    $("#overlay").css({
+        "pointer-events" : "none",
+        "opacity": "0",
+        "z-index" : "0"
+    });
+}
+
+
