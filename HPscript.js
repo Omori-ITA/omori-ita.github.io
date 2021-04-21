@@ -1,6 +1,7 @@
 
 async function swap_lang() {
-    /*var text = await load_page("ENG");*/
+    var text = await load_page("ENG");
+    console.log(text)
 
     if (lang == "ITA"){
 
@@ -46,10 +47,13 @@ async function load_page(lang) {
 
     var ita = [];
     var eng = [];
+    var text;
 
-    $.get('res/paragraph/file_ita_eng.txt', function (data) {
-        console.log(data);
+    await $.get('res/paragraph/file_ita_eng.txt', function (data) {
+        text  = data;
     }, 'text');
+
+    return text;
 }
 
 /*
