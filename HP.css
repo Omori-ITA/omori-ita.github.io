@@ -16,11 +16,11 @@ body{
     background-color: #e7e7e7;
     background-image: url("res/omori_sky.gif");
     background-repeat: revert;
-    font-family: omoriFont, OMORI_GAME, OMORI_GAME2;
+    font-family: omoriFont, OMORI_GAME2;
 }
 
 body button{
-    font-family: omoriFont, OMORI_GAME, OMORI_GAME2;
+    font-family: omoriFont, OMORI_GAME2;
     font-weight: 600;
 }
 
