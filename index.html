@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="oYGM8Yt0vP8EMIimj1Ir2b7i3uPjFk2AP82nsEXKylg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="HP.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> type="text/javascript"</script>
     <script type="text/javascript" src="HPscript.js"></script>
   </head>
 
@@ -15,7 +15,7 @@
 
     <div id="swap-language">
       <p id="lang">ITA</p> <!--Swap di lingua al tocco del pulsante-->
-      <button id="dark-mode" onclick="darkMode()"> <img id="lightbulb" src="res/lightbulb_Omori.gif"/> </button>
+      <button id="dark-mode" onclick="darkMode()"> <img id="lightbulb" class="dm-off" src="res/lightbulb_Omori.gif"/> </button>
       <button id="swap-btn" onclick="swap_lang(false)">CLICK HERE TO CHANGE LANGUAGE</button>
     </div>
 
@@ -23,12 +23,12 @@
 
       <div id="modal">
         <div class="modal-header">
+          <button id="swap-lang-modal" onclick="swap_lang(true)">🇮🇹</button>
           <div class="title">DISCLAIMER</div>
           <button class="close-button" onclick="confirm(false)">&times;</button>
-          <button id="swap-lang-modal" onclick="swap_lang(true)">🇮🇹</button>
         </div>
-        <div ID="modal-body"></div>
-        <button id="confirm" onclick="confirm(true)">Accept</button>
+        <div id="modal-body"></div>
+        <div id="button-div"><button id="confirm" onclick="confirm(true)">Ho capito</button></div>
       </div>
 
       <div id="overlay"></div>
@@ -42,23 +42,24 @@
           <img id="italian" src="res/logohtml.png"/>
         </div>
 
-        <a id="discord" href="https://discord.gg/DcPUz9zmbT"> <img src="res/discord.png"/> </a>
+        <a id="discord" href="https://discord.gg/DcPUz9zmbT"> <img src="res/discord.webp"/> </a>
       </div>
 
       <script type="text/javascript" defer>
         document.addEventListener('DOMContentLoaded', function() {
           load_page();
           showDisclaimer();
+          setInterval(displayString, 150);
+
         }, false);
       </script>
 
 
 
       <!--SEZIONE DISCLAIMER - FATTA-->
-<!--      <div class="container-info" id="disclaimer-section">
-        <h1>DISCLAIMER</h1>
-        <p id="disclaimer"></p>
-      </div>-->
+      <div id="intro">
+        <h1 id="intro-title"></h1>
+      </div>
 
       <!--SEZIONE PULSANTI DOWNLOAD - FATTA-->
       <div class="container-button-downloads">

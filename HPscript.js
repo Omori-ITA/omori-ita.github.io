@@ -1,3 +1,5 @@
+var lang = "";
+
 function swap_lang(isModal) {
 
     lang = document.getElementById('lang').textContent == "ITA" ? "ENG" : "ITA";
@@ -14,35 +16,26 @@ function swap_lang(isModal) {
         if (lang == "ENG"){
 
             document.getElementById('swap-btn').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
-            /*document.getElementById('lang').innerText = "ENG";*/
+            /*document.getElementById('intro-title').innerText = "WELCOME TO WHITE SPACE"*/
+            index = 0;
+            document.getElementById("intro-title").innerText = " ";
+            stringa = "WELCOME TO WHITE SPACE";
 
             document.getElementById('project-title').innerText = "THE PROJECT";
             document.getElementById('news').innerText = "NEWS";
             document.getElementById('title-trailer').innerText = "WATCH THE BETA 0.0.3 TRAILER!";
-
-
-            /*Posizione 0 per disclaimer*/
-            /* document.getElementById('disclaimer').innerText = text[0];*/
-            /*Posizione 1 per progetto*/
-       /*     document.getElementById('project').innerText = text[1];
-
-            document.getElementById('date').innerText = text[2];
-            document.getElementById('novita').innerText = text[3];*/
         }
 
         else{
-            /*var text = await load_page("ITA");*/
             document.getElementById('swap-btn').innerText = "CLICK HERE TO CHANGE LANGUAGE";
-            /*document.getElementById('lang').innerText = "ITA";*/
+            /*document.getElementById('intro-title').innerText = "BENVENUTO NELLO SPAZIO BIANCO";*/
+            index = 0;
+            document.getElementById("intro-title").innerText = " ";
+            stringa = "BENVENUTO NELLO SPAZIO BIANCO";
 
             document.getElementById('project-title').innerText = "IL PROGETTO";
             document.getElementById('news').innerText = "AGGIORNAMENTI";
             document.getElementById('title-trailer').innerText = "GUARDA IL TRAILER DELLA BETA 0.0.3!"
-
-            /*Posizione 0 per disclaimer*/
-            /*document.getElementById('disclaimer').innerText = text[0];*/
-            /*Posizione 1 per progetto*/
-
         }
     }
 
@@ -52,13 +45,13 @@ function swap_lang(isModal) {
 
 
         if(lang == "ENG"){
-            /*document.getElementById('lang').innerText = "ENG";*/
+            document.getElementById('confirm').innerText = "Understand";
             document.getElementById("swap-lang-modal").innerText = "🇬🇧";
             document.getElementById('modal-body').innerText = text[0];
         }
 
         else{
-            /*document.getElementById('lang').innerText = "ITA";*/
+            document.getElementById('confirm').innerText = "Ho capito";
             document.getElementById("swap-lang-modal").innerText = "🇮🇹";
             document.getElementById('modal-body').innerText = text[0];
         }
@@ -88,6 +81,145 @@ function load_page() {
 
 
 
+}
+
+//CARICA LE IMMAGINI DELLA SEZIONE SCREENSHOT
+function loadImage() {
+
+    for (var i = 0; i < 6; i++) {
+        var img = document.createElement('img');
+        img.src = "res/screenshot/Cattura" + i + ".jpg";
+
+        document.getElementById("colonna" + i % 2).appendChild(img);
+    }
+}
+
+var index = 0;
+var stringa = "BENVENUTO NELLO SPAZIO BIANCO";
+/*var string_eng = "WELCOME TO WHITE SPACE"*/
+
+function displayString() {
+
+        if(index >= stringa.length) {
+            index = 0;
+            document.getElementById("intro-title").innerText = " ";
+        }
+
+        document.getElementById("intro-title").append(stringa[index]);
+
+        index++;
+
+
+}
+
+/*FUNZIONA*/
+function darkMode() {
+
+    var audio = new Audio('res/sound/drop.mp3');
+    audio.play();
+
+    var dm = document.getElementById('lightbulb').className == "dm-off" ? "dm-on" : "dm-off";
+    document.getElementById('lightbulb').className = dm;
+
+    if(dm == "dm-on"){
+        $("#lightbulb").attr("src", "res/unnamed.gif");
+
+        $("#twitter").css({
+            "webkit-filter" : "invert(100%)"
+        });
+
+        $("#trailer-yt").css({
+            "webkit-filter" : "invert(100%)"
+        });
+
+        $("#gallery").css({
+            "webkit-filter" : "invert(100%)"
+        });
+
+        $(".container-screenshot img").css({
+            "border": "3px solid white"
+        });
+
+        $("#discord").css({
+            "webkit-filter" : "invert(100%)"
+        });
+
+        $(".container").css({
+            "webkit-filter" : "invert(100%)"
+        });
+
+
+
+
+
+    }
+
+    else{
+        $("#lightbulb").attr("src", "res/lightbulb_Omori.gif");
+
+        $(".container").css({
+            "webkit-filter" : "invert(0%)"
+        });
+
+        $("#twitter").css({
+            "webkit-filter" : "invert(0%)"
+        });
+
+        $("#trailer-yt").css({
+            "webkit-filter" : "invert(0%)"
+        });
+
+        $("#gallery").css({
+            "webkit-filter" : "invert(0%)"
+        });
+
+        $(".container-screenshot img").css({
+            "border": "3px solid black"
+        });
+
+        $("#discord").css({
+            "webkit-filter" : "invert(0%)"
+        });
+
+        $(".container").css({
+            "webkit-filter" : "invert(0%)"
+        });
+    }
+
+}
+
+function showDisclaimer() {
+    let saveChoice = localStorage.getItem('preference');
+
+    if(!saveChoice){
+        /*Se preferenza non c'e', visualizza il modal*/  /*attivo l'opacità'*/
+
+        $("#modal").css({
+            "transform": "translate(-50%, -50%) scale(1)"
+        });
+
+        $("#overlay").css({
+            "pointer-events" : "all",
+            "opacity": "1"
+        });
+
+    }
+}
+
+function confirm(flag) {
+    if(flag){
+        localStorage.setItem('preference', true);
+    }
+
+    $("#modal").css({
+        "transform": "translate(-50%, -50%) scale(0)"
+    });
+
+    $("#overlay").css({
+        "pointer-events" : "none",
+        "opacity": "0",
+        "z-index" : "0"
+    });
 }
 
 // CONTIENE LE STRINGHE ITALIANE E INGLESI
@@ -146,63 +278,5 @@ function text_array(lang) {
 }
 
 
-//CARICA LE IMMAGINI DELLA SEZIONE SCREENSHOT
-function loadImage() {
-
-    for (var i = 0; i < 6; i++) {
-        var img = document.createElement('img');
-        img.src = "res/screenshot/Cattura" + i + ".PNG";
-
-        document.getElementById("colonna" + i % 2).appendChild(img);
-    }
-}
-
-/*DA COMPLETARE PER TORNARE ALLA WHITE MODE MA FUNZIONA*/
-function darkMode() {
-
-    $("#lightbulb").attr("src", "res/unnamed.gif");
-
-    $("#italian").css({
-        "webkit-filter" : "invert(100%)"
-    });
-
-    $("#big-logo").css({
-        "webkit-filter" : "invert(100%)"
-    });
-}
-
-function showDisclaimer() {
-    let saveChoice = localStorage.getItem('preference');
-
-    if(!saveChoice){
-    /*Se preferenza non c'e', visualizza il modal*/  /*attivo l'opacità'*/
-
-        $("#modal").css({
-            "transform": "translate(-50%, -50%) scale(1)"
-        });
-
-        $("#overlay").css({
-            "pointer-events" : "all",
-            "opacity": "1"
-        });
-
-    }
-}
-
-function confirm(flag) {
-    if(flag){
-        localStorage.setItem('preference', true);
-    }
-
-    $("#modal").css({
-        "transform": "translate(-50%, -50%) scale(0)"
-    });
-
-    $("#overlay").css({
-        "pointer-events" : "none",
-        "opacity": "0",
-        "z-index" : "0"
-    });
-}
 
 

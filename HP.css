@@ -27,10 +27,11 @@ body button{
 .container{
     margin: -207px auto;
     width: 80%;
-    /* margin: auto; */
-    /* padding-top: 25px; */
     line-height: 1.5;
     background-color: white;
+    transition: -webkit-filter 1s ease-in;
+    /*QUELLO GIUSTO*/
+    /*transition: all 2s ease;*/
 }
 
 #lang{
@@ -45,12 +46,14 @@ body button{
     border-radius: 5px;
     background-color: white;
     width: min-content;
+    margin-bottom: 90px;
 }
 
 #lightbulb{
     max-height: 143px;
     max-width: 170px;
     position: sticky;
+    cursor: pointer;
 }
 
 
@@ -102,11 +105,19 @@ body button{
 
 #twitter{
     padding: 0px 10px 10px 10px;
+    transition: -webkit-filter 1s ease-in;
 }
 
 #discord {
-    padding: 0px 10px 0px 10px;
+    transition: -webkit-filter 1s ease-in;
 }
+
+#discord img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+
 
 .container-button-downloads{
     display: flex;
@@ -122,12 +133,14 @@ body button{
 }
 
 .btn{
-    border-radius: 15px;
-    border-color: black;
+    border: 3px solid black;
+    border-radius: 8px;
     background-color: white;
-    border-style: solid;
-    border-width: 10px;
+    padding: 5px;
+    font-size: 20px;
+    transition: -webkit-filter 1s ease-in
 }
+
 
 .btn:hover{
     background-color: #e7e7e7;
@@ -137,10 +150,20 @@ body button{
 #swap-btn{
     max-width: 110px;
     margin-top: 10px;
+    border: 2px solid black;
     border-radius: 5px;
-    border-width: 2px;
-    border-color: black;
     cursor: pointer;
+}
+
+#intro{
+    display: flex;
+    justify-content: center;
+
+}
+
+#intro h1{
+    letter-spacing: 15px;
+    font-size: 20px;
 }
 
 .container-info{
@@ -148,9 +171,21 @@ body button{
     grid-template-columns: 30% 40% 30%;
     margin: auto;
     width: 730px;
-    grid-template-rows: 35% 65%;
+    grid-template-rows: 30% 70%;
     background-color: white;
-    padding-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#project
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
+    margin: 0 10px 10px 10px;
+    padding: 0 10px 10px 10px;
+    text-align: center;
+    font-size: 17px;
 }
 
 #disclaimer-section{
@@ -171,8 +206,10 @@ body button{
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row: 2;
-    padding: 10px 10px 10px 10px;
+    margin: 10px;
+    padding: 10px;
     text-align: center;
+    font-size: 17px;
 }
 
 .container-info h2{
@@ -192,6 +229,8 @@ body button{
     grid-template-rows: 10% 90%;
     background-color: white;
     padding-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 #section-trailer h1{
@@ -201,6 +240,7 @@ body button{
 
 #trailer-yt{
     margin: auto;
+    transition: -webkit-filter 1s ease-in;
 }
 
 .container-screenshot{
@@ -211,7 +251,7 @@ body button{
 
 #gallery{
     display: flex;
-
+    transition: -webkit-filter 1s ease-in;
 }
 
 .container-screenshot h1{
@@ -229,17 +269,20 @@ body button{
 .container-screenshot img{
     /*AUMENTA GRANDEZZA IMMAGINE*/
     width: 350px;
-    height: 262px;
-    padding: 25px;
+    height: 196px;
+    margin: 25px;
+    padding: 2px;
+    border: 3px solid;
+    border-radius: 5px;
+    transition: -webkit-filter 1s ease-in;
 }
 
 #modal {
     position: fixed;
     top: 50%;
     left: 50%;
-    transition: -webkit-filter 5s ease-in;
     transform: translate(-50%, -50%) scale(0);
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 10px;
     z-index: 10;
     background-color: white;
@@ -271,7 +314,18 @@ body button{
 }
 
 #modal-body{
+    text-align: center;
     padding: 10px 15px;
+}
+
+#button-div{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+#button-div #confirm{
+    min-width: 56px;
 }
 
 #overlay{
@@ -292,19 +346,11 @@ body button{
     pointer-events: all;
 }
 
-/*
-@media ( max-width: 1400px ) {
+@media ( max-width: 1050px ) {
     #swap-language{
         left: 1100px;
     }
 }
-
-@media ( max-width: 1024px ) {
-    #swap-language{
-        left: 1100px;
-    }
-}
-*/
 
 
 
