@@ -15,7 +15,8 @@ body{
     margin: auto;
     background-color: #e7e7e7;
     background-image: url("res/omori_sky.gif");
-    background-repeat: revert;
+    background-size: contain;
+    background-repeat: repeat-y;
     font-family: omoriFont, OMORI_GAME2;
 }
 
@@ -25,11 +26,12 @@ body button{
 }
 
 .container{
-    margin: -207px auto;
+    margin: -130px auto 80px;
     width: 80%;
     line-height: 1.5;
     background-color: white;
     transition: -webkit-filter 1s ease-in;
+    border-radius: 20px;
     /*QUELLO GIUSTO*/
     /*transition: all 2s ease;*/
 }
@@ -244,7 +246,7 @@ body button{
 }
 
 .container-screenshot{
-
+    border-radius: 20px;
     background-color: white;
     margin: 50px auto;
 }
