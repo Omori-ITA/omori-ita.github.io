@@ -88,7 +88,7 @@ function loadImage() {
 
     for (var i = 0; i < 6; i++) {
         var img = document.createElement('img');
-        img.src = "res/screenshot/Cattura" + i + ".jpg";
+        img.src = "res/screenshot/CATTURA" + i + ".jpg";
 
         document.getElementById("colonna" + i % 2).appendChild(img);
     }
