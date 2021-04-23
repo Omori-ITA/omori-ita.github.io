@@ -82,55 +82,29 @@ function load_page() {
 
 }
 
-function UrlExists(url1)
-{
-    $.ajax({
-        url: url1,
-        type:'HEAD',
-        error: function()
-        {
-            return false;
-        },
-        success: function()
-        {
-            return true;
-        }
-    });
-}
 
 
-/*function contaImg() {
-
-    while()
-
-}*/
 
 //CARICA LE IMMAGINI DELLA SEZIONE SCREENSHOT
 function loadImage() {
 
+    var card = document.getElementById("slider-item");
+    var insideCard = document.createElement('div');
+    insideCard.className = "item active";
 
-
-/*    var img = res/screenshot/CATTURA0.jpg*/
-
-    for (var i = 0; i < 7; i++) {
-        var img = new Image();
-        /*return img.height != 0;*/
-        /*var img = document.createElement('img');*/
+    for (var i = 0; i < 6; i++) {
+        var img = document.createElement('img');
         img.src = "res/screenshot/CATTURA" + i + ".jpg";
 
-        if(!UrlExists(img.src)){
-            console.log("TROVATO");
-            break;
-        }
+        insideCard.appendChild(img);
+        card.appendChild(insideCard);
 
-
-        /*  if(img.height != 0){
-              console.log(img);
-              break;
-          }*/
-
-        console.log(img.width);
+        insideCard = document.createElement('div');
+        insideCard.className = "item";
     }
+
+    slides=document.querySelector('.slider-items').children;
+    totalSlides=slides.length;
 }
 
 var index = 0;
@@ -319,10 +293,10 @@ var ind=0;
 var totalSlides;
 var slides;
 document.addEventListener("DOMContentLoaded", function(){
-    slides=document.querySelector('.slider-items').children;
+
     var nextSlide=document.querySelector(".right-slide");
     var prevSlide=document.querySelector(".left-slide");
-    totalSlides=slides.length;
+
 
 
     nextSlide.onclick=function () {
@@ -334,8 +308,6 @@ document.addEventListener("DOMContentLoaded", function(){
     prevSlide.onclick=function () {
         next("prev");
     }
-
-
 
 });
 
