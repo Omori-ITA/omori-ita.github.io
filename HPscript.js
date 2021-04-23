@@ -64,7 +64,6 @@ function swap_lang(isModal) {
 function load_page() {
 
     /*CARICA TUTTE LE RISORSE ALL'AVVIO DELLA PAGINA*/
-    loadImage();
 
     var temp = text_array("ITA");
 
@@ -83,20 +82,59 @@ function load_page() {
 
 }
 
+function UrlExists(url1)
+{
+    $.ajax({
+        url: url1,
+        type:'HEAD',
+        error: function()
+        {
+            return false;
+        },
+        success: function()
+        {
+            return true;
+        }
+    });
+}
+
+
+/*function contaImg() {
+
+    while()
+
+}*/
+
 //CARICA LE IMMAGINI DELLA SEZIONE SCREENSHOT
 function loadImage() {
 
-    for (var i = 0; i < 6; i++) {
-        var img = document.createElement('img');
+
+
+/*    var img = res/screenshot/CATTURA0.jpg*/
+
+    for (var i = 0; i < 7; i++) {
+        var img = new Image();
+        /*return img.height != 0;*/
+        /*var img = document.createElement('img');*/
         img.src = "res/screenshot/CATTURA" + i + ".jpg";
 
-        document.getElementById("colonna" + i % 2).appendChild(img);
+        if(!UrlExists(img.src)){
+            console.log("TROVATO");
+            break;
+        }
+
+
+        /*  if(img.height != 0){
+              console.log(img);
+              break;
+          }*/
+
+        console.log(img.width);
     }
 }
 
 var index = 0;
 var stringa = "BENVENUTO NELLO SPAZIO BIANCO";
-/*var string_eng = "WELCOME TO WHITE SPACE"*/
 
 function displayString() {
 
@@ -243,7 +281,7 @@ function text_array(lang) {
         " ma dovrete aprirlo dalla libreria di Steam. Perciò avrete bisogno di una copia del gioco LEGITTIMA su Steam.)",
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "15/04/2021",
+        "22/05/2021",
         "AUGURI CLAUS! Attualmente abbiamo quasi completato l’intera traduzione di OMORI. Mancano infatti solo alcune immagini e varie correzioni per rimuovere definitivamente " +
         "gli errori di scrittura rimasti. Per maggiori informazioni o per qualsiasi domanda vi consigliamo di unirvi al gruppo DISCORD di cui trovate l’invito in fondo alla pagina :)"
     ]
@@ -276,6 +314,71 @@ function text_array(lang) {
         return eng_array;
     }
 }
+
+var ind=0;
+var totalSlides;
+var slides;
+document.addEventListener("DOMContentLoaded", function(){
+    slides=document.querySelector('.slider-items').children;
+    var nextSlide=document.querySelector(".right-slide");
+    var prevSlide=document.querySelector(".left-slide");
+    totalSlides=slides.length;
+
+
+    nextSlide.onclick=function () {
+        next("next");
+    }
+
+
+
+    prevSlide.onclick=function () {
+        next("prev");
+    }
+
+
+
+});
+
+function next(direction){
+
+    if(direction=="next"){
+        ind++;
+        if(ind==totalSlides){
+            ind=0;
+        }
+    }
+    if(direction=="prev"){
+        if(ind==0){
+            ind=totalSlides-1;
+        }
+        else{
+            ind--;
+        }
+    }
+
+    if(!direction){
+        ind++;
+        if(ind==totalSlides){
+            ind=0;
+        }
+    }
+
+
+    for(i=0;i<slides.length;i++){
+        slides[i].classList.remove("active");
+    }
+    slides[ind].classList.add("active");
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
