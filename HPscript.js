@@ -1,4 +1,5 @@
 var lang = "";
+var intervallo;
 
 function swap_lang(isModal) {
 
@@ -12,29 +13,32 @@ function swap_lang(isModal) {
 
         document.getElementById('date').innerText = text[2];
         document.getElementById('novita').innerText = text[3];
+        document.getElementById('dati_supporto').innerText = text[4];
+        document.getElementById('paragraph-copyright').innerText = text[5];
 
         if (lang == "ENG"){
 
             document.getElementById('swap-btn').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
-            /*document.getElementById('intro-title').innerText = "WELCOME TO WHITE SPACE"*/
             index = 0;
             document.getElementById("intro-title").innerText = " ";
             stringa = "WELCOME TO WHITE SPACE";
 
             document.getElementById('project-title').innerText = "THE PROJECT";
             document.getElementById('news').innerText = "NEWS";
+            document.getElementById('support').innerText = "SUPPORT";
             document.getElementById('title-trailer').innerText = "WATCH THE BETA 0.0.3 TRAILER!";
         }
 
         else{
             document.getElementById('swap-btn').innerText = "CLICK HERE TO CHANGE LANGUAGE";
-            /*document.getElementById('intro-title').innerText = "BENVENUTO NELLO SPAZIO BIANCO";*/
+
             index = 0;
             document.getElementById("intro-title").innerText = " ";
             stringa = "BENVENUTO NELLO SPAZIO BIANCO";
 
             document.getElementById('project-title').innerText = "IL PROGETTO";
             document.getElementById('news').innerText = "AGGIORNAMENTI";
+            document.getElementById('support').innerText = "SUPPORTO";
             document.getElementById('title-trailer').innerText = "GUARDA IL TRAILER DELLA BETA 0.0.3!"
         }
     }
@@ -55,7 +59,6 @@ function swap_lang(isModal) {
             document.getElementById("swap-lang-modal").innerText = "🇮🇹";
             document.getElementById('modal-body').innerText = text[0];
         }
-
 
     }
 
@@ -78,7 +81,11 @@ function load_page() {
     /*Posizione 3 per il testo in novità*/
     document.getElementById('novita').innerText = temp[3];
 
+    /*Posizione 4 per il testo in supporto*/
+    document.getElementById('dati_supporto').innerText = temp[4];
 
+    /*Posizione 5 per il testo in copyright*/
+    document.getElementById('paragraph-copyright').innerText = temp[5];
 
 }
 
@@ -204,7 +211,7 @@ function showDisclaimer() {
     let saveChoice = localStorage.getItem('preference');
 
     if(!saveChoice){
-        /*Se preferenza non c'e', visualizza il modal*/  /*attivo l'opacità'*/
+        /*Se preferenza non c'e', visualizza il modal*/
 
         $("#modal").css({
             "transform": "translate(-50%, -50%) scale(1)"
@@ -257,7 +264,16 @@ function text_array(lang) {
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
         "22/05/2021",
         "AUGURI CLAUS! Attualmente abbiamo quasi completato l’intera traduzione di OMORI. Mancano infatti solo alcune immagini e varie correzioni per rimuovere definitivamente " +
-        "gli errori di scrittura rimasti. Per maggiori informazioni o per qualsiasi domanda vi consigliamo di unirvi al gruppo DISCORD di cui trovate l’invito in fondo alla pagina :)"
+        "gli errori di scrittura rimasti. Per maggiori informazioni o per qualsiasi domanda vi consigliamo di unirvi al gruppo DISCORD di cui trovate l’invito in fondo alla pagina :)",
+
+        /*SEZIONE CONTATTI*/
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at consectetur delectus dolorem doloremque exercitationem " +
+        "laborum minus placeat, provident quas sunt temporibus! Id, praesentium reiciendis?",
+
+        /*SEZIONE COPYRIGHT*/
+        "Tutti i diritti riservati (All Rights Reserved in lingua inglese) è una formula con cui il titolare del diritto d'autore dichiara " +
+        "che una determinata opera dell'ingegno non è riproducibile senza la sua espressa autorizzazione."
+
     ]
 
 
@@ -274,10 +290,18 @@ function text_array(lang) {
         "So, you're going to need a LEGIT copy of the game on Steam.)",
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "15/04/2021",
+        "14/04/2021",
         "HAPPY BDAY CLAUS! " +
         "Currently we have almost completed the OMORI translation. In fact, only some images and various corrections to remove writing mistakes are missing. " +
-        "For more information or for any question we suggest you to join the DISCORD server of which you find the invite at the end of the page."
+        "For more information or for any question we suggest you to join the DISCORD server of which you find the invite at the end of the page.",
+
+        /*SEZIONE CONTATTI*/
+        "Lorem15112651545 ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at consectetur delectus dolorem doloremque exercitationem  " +
+        "laborum minus placeat, provident quas sunt temporibus! Id, praesentium reiciendis?",
+
+        /*SEZIONE COPYRIGHT*/
+        "All Rights Reserved (All Rights Reserved in English) is a formula with which the copyright holder declares that a certain intellectual work " +
+        "cannot be reproduced without his express authorization."
     ]
 
     if(lang == "ITA"){
@@ -288,6 +312,8 @@ function text_array(lang) {
         return eng_array;
     }
 }
+
+
 
 var ind=0;
 var totalSlides;
@@ -314,12 +340,17 @@ document.addEventListener("DOMContentLoaded", function(){
 function next(direction){
 
     if(direction=="next"){
+        /*clearInterval(intervallo);*/
         ind++;
         if(ind==totalSlides){
             ind=0;
         }
     }
+
+
+
     if(direction=="prev"){
+        /*clearInterval(intervallo);*/
         if(ind==0){
             ind=totalSlides-1;
         }
@@ -334,7 +365,6 @@ function next(direction){
             ind=0;
         }
     }
-
 
     for(i=0;i<slides.length;i++){
         slides[i].classList.remove("active");

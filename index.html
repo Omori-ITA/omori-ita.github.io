@@ -50,7 +50,7 @@
           load_page();
           showDisclaimer();
           setInterval(displayString, 150);
-          setInterval(next,10000);
+
           loadImage();
 
         }, false);
@@ -88,15 +88,24 @@
         <iframe id="trailer-yt" src="https://www.youtube.com/embed/TWdHF9YPreQ" width="640" height="480"></iframe>
       </div>
 
+      <div class="container-info" id="section-supporto">
+        <h1 id="support">SUPPORTO</h1>
+        <p id="dati_supporto"></p>
+      </div>
+
       <div class="container-slider">
         <h1>SCREENSHOT</h1>
         <div class="slider">
           <div class="slider-items" id="slider-item"></div>
           <!-- slider controls -->
-          <div class="left-slide"><</div>
-          <div class="right-slide">></div>
+          <div class="left-slide" onclick="resetTimer()"><</div>
+          <div class="right-slide" onclick="resetTimer()">></div>
           <!-- slider controls -->
         </div>
+      </div>
+
+      <div class="copyright">
+        <p id="paragraph-copyright"></p>
       </div>
     </main>
 
