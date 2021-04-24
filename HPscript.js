@@ -1,11 +1,15 @@
 var lang = "";
 var intervallo;
+var changeText = window.matchMedia("(max-width: 850px)");
+
 
 function swap_lang(isModal) {
 
     lang = document.getElementById('lang').textContent == "ITA" ? "ENG" : "ITA";
     document.getElementById('lang').innerText = lang;
     var text = text_array(lang);
+
+    var winWidth = $(window).width();
 
     if(!isModal){
 
@@ -18,7 +22,6 @@ function swap_lang(isModal) {
 
         if (lang == "ENG"){
 
-            document.getElementById('swap-btn').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
             index = 0;
             document.getElementById("intro-title").innerText = " ";
             stringa = "WELCOME TO WHITE SPACE";
@@ -30,7 +33,6 @@ function swap_lang(isModal) {
         }
 
         else{
-            document.getElementById('swap-btn').innerText = "CLICK HERE TO CHANGE LANGUAGE";
 
             index = 0;
             document.getElementById("intro-title").innerText = " ";
@@ -47,30 +49,56 @@ function swap_lang(isModal) {
 
         /*Posizione 0 per disclaimer*/
 
-
         if(lang == "ENG"){
             document.getElementById('confirm').innerText = "Understand";
             document.getElementById("swap-lang-modal").innerText = "🇬🇧";
-            document.getElementById('modal-body').innerText = text[0];
+            document.getElementById('modal-body-p').innerText = text[0];
         }
 
         else{
             document.getElementById('confirm').innerText = "Ho capito";
             document.getElementById("swap-lang-modal").innerText = "🇮🇹";
-            document.getElementById('modal-body').innerText = text[0];
+            document.getElementById('modal-body-p').innerText = text[0];
         }
 
     }
 
+    myFunction(changeText);
+    changeText.addListener(myFunction);
+
+}
+
+function myFunction(x) {
+
+    var lingua = document.getElementById('lang').textContent;
+
+    if (x.matches) {
+        if (lingua == "ENG"){
+            document.getElementById('swap-btn').innerText = "CAMBIA LINGUA";
+        }else {
+            document.getElementById('swap-btn').innerText = "SWAP LANGUAGE";
+        }
+
+    } else {
+        if (lingua == "ENG"){
+            document.getElementById('swap-btn').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
+        }else {
+            document.getElementById('swap-btn').innerText = "CLICK HERE TO CHANGE LANGUAGE";
+        }
+    }
 }
 
 function load_page() {
 
     /*CARICA TUTTE LE RISORSE ALL'AVVIO DELLA PAGINA*/
 
+    myFunction(changeText, lang);
+    changeText.addListener(myFunction);
+
     var temp = text_array("ITA");
 
-    document.getElementById('modal-body').innerText = temp[0];
+
+    document.getElementById('modal-body-p').innerText = temp[0];
 
     /*Posizione 1 per progetto*/
     document.getElementById('project').innerText = temp[1];
