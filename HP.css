@@ -172,7 +172,7 @@ body button{
     border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
-    padding: 5px;
+    padding: 4px;
     font-size: 17px;
 }
 
@@ -701,20 +701,102 @@ body button{
         position: relative;
         bottom: 113px;
     }
+
+    #intro h1{
+        width: 380px;
+    }
+
+    .container-info{
+        width: 380px;
+    }
+
+    #section-trailer{
+        width: 380px;
+    }
+
+    #trailer-yt{
+        width: 360px;
+        height: 270px;
+    }
+
+    .slider{
+        max-width: 380px;
+
+    }
+
+    .container-slider{
+        max-width: 360px;
+    }
 }
 
-/*@media ( max-width: 550px ) {
+@media ( max-width: 590px ) {
     .true-logo #big-logo {
-        width: 450px;
+        width: 340px;
     }
 
     .true-logo #italian {
-        width: 450px;
+        width: 340px;
     }
 
-    #modal-body{
-        margin-top: 5px;
+    .header a img {
+        max-width: 60px;
+        max-height: 60px;
     }
-}*/
+
+    #discord img {
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+    #twitter {
+        position: relative;
+        top: 111px;
+        left: 77.5%;
+    }
+
+    #swap-language {
+        display: none;
+    }
+
+    #intro{
+        padding: 0px 25px;
+        margin: 15px 0 10px 0;
+    }
+
+    .header {
+        position: relative;
+        top: 11px;
+        display: block;
+        margin-bottom: 0px;
+    }
+
+    .container {
+        width: 96%;
+        top: 181px;
+    }
+
+    .container-info{
+        width: 325px;
+    }
+
+    #section-trailer{
+        width: 325px;
+    }
+
+    #trailer-yt{
+        width: 300px;
+        height: 225px;
+    }
+
+    .slider{
+        max-width: 340px;
+
+    }
+
+    .container-slider{
+        max-width: 305px;
+    }
+
+}
 
 
