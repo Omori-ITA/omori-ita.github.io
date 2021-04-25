@@ -17,7 +17,7 @@
   <div id="background"></div>
     <div id="swap-language">
       <p id="lang">ITA</p> <!--Swap di lingua al tocco del pulsante-->
-      <button id="dark-mode" onclick="darkMode()"> <img id="lightbulb" class="dm-off" src="res/lightbulb_Omori.gif"/> </button>
+      <button id="dark-mode" onclick="darkMode(false)"> <img id="lightbulb" class="dm-off" src="res/lightbulb_Omori.gif"/> </button>
       <button id="swap-btn" onclick="swap_lang(false)"></button>
     </div>
 
@@ -25,7 +25,7 @@
 
       <div id="modal">
         <div class="modal-header">
-          <button id="swap-lang-modal" onclick="swap_lang(true)">🇬🇧</button>
+          <button id="swap-lang-modal" onclick="swap_lang(true)"></button>
           <div class="title">DISCLAIMER</div>
           <button class="close-button" onclick="confirm(false)">&times;</button>
         </div>
@@ -46,7 +46,7 @@
           <img id="big-logo" src="res/Omori_Logo.webp"/>
           <img id="italian" src="res/logohtml.png"/>
         </div>
-        <button id="dark-mode-mobile" onclick="darkMode()"> <img id="lightbulb-mobile" class="dm-off" src="res/lightbulb_Omori.gif"/> </button>
+        <button id="dark-mode-mobile" onclick="darkMode(false)"> <img id="lightbulb-mobile" class="dm-off" src="res/lightbulb_Omori.gif"/> </button>
         <a id="discord" href="https://discord.gg/DcPUz9zmbT"> <img src="res/discord.webp"/> </a>
       </div>
 
@@ -55,7 +55,7 @@
           load_page();
           showDisclaimer();
           setInterval(displayString, 150);
-
+          isDarkMode();
           loadImage();
 
         }, false);

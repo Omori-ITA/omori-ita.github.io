@@ -44,10 +44,9 @@ body button{
     width: 80%;
     line-height: 1.5;
     background-color: white;
-    transition: -webkit-filter 1s ease-in;
     border-radius: 20px;
     /*QUELLO GIUSTO*/
-    /*transition: all 2s ease;*/
+    transition: all 1s ease;
 }
 
 #lang{
@@ -63,6 +62,7 @@ body button{
     background-color: white;
     width: min-content;
     margin-bottom: 90px;
+    transition: all 1s ease;
 }
 
 #lightbulb{
@@ -70,6 +70,7 @@ body button{
     max-width: 170px;
     position: sticky;
     cursor: pointer;
+    transition: all 1s ease;
 }
 
 
@@ -112,6 +113,7 @@ body button{
     display: none;
     max-width: 170px;
     max-height: 85px;
+    transition: all 1s ease;
 }
 
 
@@ -124,7 +126,7 @@ body button{
 }
 
 .true-logo #big-logo{
-    transition: -webkit-filter 1s ease-in;
+    transition: all 1s ease;
     margin: auto;
 }
 
@@ -132,18 +134,26 @@ body button{
     position: relative;
     top: -14px;
     /*Per il black space*/
-    -webkit-filter: invert(0%);
+    transition: all 1s ease;
 }
 
 
 
 #twitter{
     padding: 0px 10px 10px 10px;
-    transition: -webkit-filter 1s ease-in;
+    transition: all 1s ease;
+}
+
+#twitter:hover{
+    transform: translateY(-10px);
 }
 
 #discord {
-    transition: -webkit-filter 1s ease-in;
+    transition: all 1s ease;
+}
+
+#discord:hover{
+    transform: translateY(-10px);
 }
 
 #discord img {
@@ -172,23 +182,35 @@ body button{
     background-color: white;
     padding: 5px;
     font-size: 22px;
-    transition: -webkit-filter 1s ease-in
+    transition: all 1s ease;
 }
 
 
 .btn:hover{
-    background-color: #e7e7e7;
     /*AGGIUNGERE ANIMAZIONI*/
+    box-shadow: 0.5px 5px 3px 3px #888888; /*#535353*/
+    transform: translateY(-10px);
 }
 
 #swap-btn {
     max-width: 110px;
     margin-top: 10px;
     border: 2px solid black;
+    background-color: white;
     border-radius: 5px;
     cursor: pointer;
     padding: 4px;
     font-size: 17px;
+    transition: all 1s ease;
+}
+
+#swap-btn:hover{
+    transform: translateY(-10px);
+}
+
+#intro-title{
+    color: black;
+    transition: all 1s ease;
 }
 
 #btn-swap-lingua{
@@ -198,11 +220,12 @@ body button{
     background-color: white;
     padding: 5px;
     font-size: 22px;
-    transition: -webkit-filter 1s ease-in;
+    transition: all 1s ease;
 }
 
 #btn-swap-lingua:hover{
-    background-color: #e7e7e7;
+    box-shadow: 0.5px 5px 3px 3px #888888;
+    transform: translateY(-10px);
 }
 
 #intro{
@@ -230,6 +253,7 @@ body button{
     background-color: white;
     border-radius: 10px;
     border: 2px solid black;
+    transition: all 1s ease;
 }
 
 #project
@@ -263,6 +287,7 @@ body button{
     padding-top: 10px;
     grid-column: 2;
     text-align: center;
+    transition: all 1s ease;
 }
 
 .container-info p{
@@ -273,6 +298,7 @@ body button{
     padding: 10px;
     text-align: center;
     font-size: 17px;
+    transition: all 1s ease;
 }
 
 .container-info h2{
@@ -282,7 +308,8 @@ body button{
     justify-content: flex-end;
     position: relative;
     top: 8px;
-    padding-right: 20px
+    padding-right: 20px;
+    transition: all 1s ease;
 }
 
 #section-trailer {
@@ -295,17 +322,19 @@ body button{
     padding-bottom: 20px;
     border: 2px solid black;
     border-radius: 10px;
+    transition: all 1s ease;
 }
 
 #section-trailer h1{
     margin: auto;
     text-align: center;
     padding: 10px 0 10px 0;
+    transition: all 1s ease;
 }
 
 #trailer-yt{
     margin: auto;
-    transition: -webkit-filter 1s ease-in;
+    transition: all 1s ease;
     width: 640px;
     height: 480px;
     border-radius: 10px;
@@ -322,6 +351,7 @@ body button{
     display: flex;
     flex-wrap: wrap-reverse;
     font-size: 22px;
+    transition: all 1s ease;
 }
 
 .copyright{
@@ -332,6 +362,31 @@ body button{
     padding: 10px;
     text-align: center;
     font-weight: 900;
+}
+
+#paragraph-copyright{
+    color: black;
+    transition: all 1s ease;
+}
+
+#swap-lang-modal {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 5px;
+    background-image: url(res/english.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 28px;
+    height: 27px;
+    border: none;
+}
+
+
+
+.close-button:hover{
+    color: black;
+    background-color: #e7e7e7;
 }
 
 #modal {
@@ -346,7 +401,6 @@ body button{
     width: 505px;
     min-height: 290px;
     max-width: 80%;
-
 }
 
 .modal-header{
@@ -363,13 +417,27 @@ body button{
     width: min-content;
 }
 
-.modal-header .close-button{
+.close-button{
    cursor: pointer;
     border: none;
     outline: none;
     background: none;
     font-size: 1.25rem;
     font-weight: bold;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    color: black;
+}
+
+#confirm{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#confirm:hover{
+    background-color: #e7e7e7;
 }
 
 
@@ -410,7 +478,6 @@ body button{
     background-color: rgba(0,0,0,.5);
     pointer-events:none;
     z-index: 11;
-    transition: -webkit-filter 5s ease-in;
 }
 
 #overlay.active{
@@ -430,7 +497,8 @@ body button{
 }
 
 .container-slider h1{
-     text-align: center;
+    text-align: center;
+    transition: all 1s ease;
 }
 
 .container-slider{
@@ -442,6 +510,7 @@ body button{
     position: relative;
     bottom: 28px;
     padding: 10px;
+    transition: all 1s ease;
 }
 
 .slider .left-slide,.slider .right-slide{
@@ -457,11 +526,12 @@ body button{
     margin-top: -20px;
     text-align: center;
     line-height: 40px;
-
 }
+
 .slider .left-slide:hover,.slider .right-slide:hover{
     box-shadow: 0px 0px 10px black;
-    background-color: #29a8e2;
+    color: black;
+    background-color: #e7e7e7;
 }
 
 .slider .left-slide{
@@ -477,7 +547,7 @@ body button{
 }
 
 @keyframes zoom{
-    0%{transform: scale(2);opacity: 0}
+    0%{transform: scale(2);opacity: 0;}
     50%{transform: scale(2);}
     100%{transform: scale(1);opacity:1}
 }

@@ -51,13 +51,21 @@ function swap_lang(isModal) {
 
         if(lang == "ENG"){
             document.getElementById('confirm').innerText = "Understand";
-            document.getElementById("swap-lang-modal").innerText = "🇮🇹";
+
+            $("#swap-lang-modal").css({
+                "background-image" : "url(res/italy.png)"
+            });
+
             document.getElementById('modal-body-p').innerText = text[0];
         }
 
         else{
             document.getElementById('confirm').innerText = "Ho capito";
-            document.getElementById("swap-lang-modal").innerText = "🇬🇧";
+
+            $("#swap-lang-modal").css({
+                "background-image" : "url(res/english.png)"
+            });
+
             document.getElementById('modal-body-p').innerText = text[0];
         }
 
@@ -164,77 +172,282 @@ function displayString() {
 
 }
 
-/*FUNZIONA*/
-function darkMode() {
+function isDarkMode() {
+    /*SE DARKMODE NON ESISTE, ALLORA SETTALA A NEGATIVO (false)*/
+    var savePref = localStorage.getItem('darkMode');
 
-    var audio = new Audio('res/sound/drop.mp3');
-    audio.play();
+    if (!savePref) {
+        localStorage.setItem('darkMode', false);
+
+        return;
+    }
+
+    if (savePref == "true") {
+        darkMode(true);
+    }
+}
+
+
+/*FUNZIONA*/
+function darkMode(flag) {
+
+    if (!flag){
+        var audio = new Audio('res/sound/drop.mp3');
+        audio.play();
+    }
+
 
     var dm = document.getElementById('lightbulb').className == "dm-off" ? "dm-on" : "dm-off";
     document.getElementById('lightbulb').className = dm;
 
     if(dm == "dm-on"){
-        $("#lightbulb").attr("src", "res/unnamed.gif");
 
-        $("#twitter").css({
+        localStorage.setItem('darkMode', true);
+
+        $("#lightbulb").css({
             "webkit-filter" : "invert(100%)"
         });
 
-        $("#trailer-yt").css({
+        $(".btn:hover").css({
+            "box-shadow" : "0.5px 5px 3px 3px #535353"
+        });
+
+        $("#lightbulb-mobile").css({
             "webkit-filter" : "invert(100%)"
         });
 
-        $("#gallery").css({
+        $("#btn-swap-lingua").css({
+            "border" : "2px solid white",
+            "background-color" : "black",
+            "color" : "white"
+        });
+
+        $("#modal").css({
+            "border" : "3px solid white",
+            "background-color" : "black",
+            "color" : "white"
+        });
+
+        $(".modal-header").css({
+            "border" : "1px solid white",
+        });
+
+        $(".close-button").css({
+            "color" : "white"
+        });
+
+        $(".close-button:hover").css({
+            "background-color": "white"
+        });
+
+        $("#confirm").css({
+            "border" : "2px solid white",
+            "background-color" : "black",
+            "color" : "white"
+        });
+
+        $("#swap-btn").css({
+            "border" : "2px solid white",
+            "background-color" : "black",
+            "color" : "white"
+        });
+
+        $("#big-logo").css({
             "webkit-filter" : "invert(100%)"
+        });
+
+        $("#italian").css({
+            "webkit-filter" : "invert(100%)"
+        });
+
+        $(".container").css({
+            "background-color" : "black"
         });
 
         $(".container-screenshot img").css({
             "border": "3px solid white"
         });
 
-        $("#discord").css({
-            "webkit-filter" : "invert(100%)"
+        $(".header").css({
+            "background-color" : "black"
         });
 
-        $(".container").css({
-            "webkit-filter" : "invert(100%)"
+        $("#intro-title").css({
+            "color" : "white"
         });
 
+        $(".container-button-downloads a").css({
+            "color" : "white"
+        });
 
+        $(".btn").css({
+            "border" : "3px solid white",
+            "background-color" : "black"
+        });
 
+        $(".container-info").css({
+            "border" : "2px solid white",
+            "background-color" : "black"
+        });
 
+        $(".container-info h1").css({
+            "color" : "white"
+        });
+
+        $(".container-info h2").css({
+            "color" : "white"
+        });
+
+        $("#novita").css({
+            "color" : "white"
+        });
+
+        $("#section-trailer").css({
+            "background-color" : "black",
+            "border" : "2px solid white"
+        });
+
+        $("#title-trailer").css({
+            "color" : "white"
+        });
+
+        $("#dati_supporto").css({
+            "color" : "white"
+        });
+
+        $(".container-slider").css({
+            "background-color" : "black",
+            "border" : "2px solid white"
+        });
+
+        $(".container-slider h1").css({
+            "color" : "white"
+        });
+
+        $("#project").css({
+            "color" : "white"
+        });
+
+        $(".btn-swap-lingua").css({
+            "border" : "3px solid white",
+            "background-color" : "black",
+            "color" : "white"
+        });
+
+        $("#paragraph-copyright").css({
+            "color" : "white"
+        });
 
     }
 
     else{
-        $("#lightbulb").attr("src", "res/lightbulb_Omori.gif");
+
+        localStorage.setItem('darkMode', false);
+
+        $("#lightbulb").css({
+            "webkit-filter" : "invert(0%)"
+        });
+
+        $("#lightbulb-mobile").css({
+            "webkit-filter" : "invert(0%)"
+        });
+
+        $("#btn-swap-lingua").css({
+            "border" : "2px solid black",
+            "background-color" : "white",
+            "color" : "black"
+        });
+
+        $("#swap-btn").css({
+            "border" : "2px solid black",
+            "background-color" : "white",
+            "color" : "black"
+        });
+
+        $("#big-logo").css({
+            "webkit-filter" : "invert(0%)"
+        });
+
+        $("#italian").css({
+            "webkit-filter" : "invert(0%)"
+        });
 
         $(".container").css({
-            "webkit-filter" : "invert(0%)"
-        });
-
-        $("#twitter").css({
-            "webkit-filter" : "invert(0%)"
-        });
-
-        $("#trailer-yt").css({
-            "webkit-filter" : "invert(0%)"
-        });
-
-        $("#gallery").css({
-            "webkit-filter" : "invert(0%)"
+            "background-color" : "white"
         });
 
         $(".container-screenshot img").css({
             "border": "3px solid black"
         });
 
-        $("#discord").css({
-            "webkit-filter" : "invert(0%)"
+        $(".header").css({
+            "background-color" : "white"
         });
 
-        $(".container").css({
-            "webkit-filter" : "invert(0%)"
+        $("#intro-title").css({
+            "color" : "black"
+        });
+
+        $(".container-button-downloads a").css({
+            "color" : "black"
+        });
+
+        $(".btn").css({
+            "border" : "3px solid black",
+            "background-color" : "white"
+        });
+
+        $(".container-info").css({
+            "border" : "2px solid black",
+            "background-color" : "white"
+        });
+
+        $(".container-info h1").css({
+            "color" : "black"
+        });
+
+        $(".container-info h2").css({
+            "color" : "black"
+        });
+
+        $("#novita").css({
+            "color" : "black"
+        });
+
+        $("#section-trailer").css({
+            "background-color" : "white",
+            "border" : "2px solid black"
+        });
+
+        $("#title-trailer").css({
+            "color" : "black"
+        });
+
+        $("#dati_supporto").css({
+            "color" : "black"
+        });
+
+        $(".container-slider").css({
+            "background-color" : "white",
+            "border" : "2px solid black"
+        });
+
+        $(".container-slider h1").css({
+            "color" : "black"
+        });
+
+        $("#project").css({
+            "color" : "black"
+        });
+
+        $(".btn-swap-lingua").css({
+            "border" : "3px solid black",
+            "background-color" : "white",
+            "color" : "black"
+        });
+
+        $("#paragraph-copyright").css({
+            "color" : "black"
         });
     }
 
