@@ -98,6 +98,22 @@ body button{
     border-color: transparent;
 }
 
+#dark-mode-mobile{
+    display: none;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    position: relative;
+    left: 139px;
+    bottom: 65px;
+}
+
+#lightbulb-mobile{
+    display: none;
+    max-width: 170px;
+    max-height: 85px;
+}
+
 
 .true-logo{
     display: flex;
@@ -141,7 +157,6 @@ body button{
     display: flex;
     justify-content: space-around;
     padding-bottom: 50px;
-    padding-top: 50px;
 }
 
 .container-button-downloads a{
@@ -166,7 +181,7 @@ body button{
     /*AGGIUNGERE ANIMAZIONI*/
 }
 
-#swap-btn{
+#swap-btn {
     max-width: 110px;
     margin-top: 10px;
     border: 2px solid black;
@@ -174,6 +189,20 @@ body button{
     cursor: pointer;
     padding: 4px;
     font-size: 17px;
+}
+
+#btn-swap-lingua{
+    display: none;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: white;
+    padding: 5px;
+    font-size: 22px;
+    transition: -webkit-filter 1s ease-in;
+}
+
+#btn-swap-lingua:hover{
+    background-color: #e7e7e7;
 }
 
 #intro{
@@ -279,7 +308,9 @@ body button{
     transition: -webkit-filter 1s ease-in;
     width: 640px;
     height: 480px;
+    border-radius: 10px;
 }
+
 
 #novita{
     display: flex;
@@ -395,6 +426,7 @@ body button{
     margin: auto;
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .container-slider h1{
@@ -497,6 +529,16 @@ body button{
         width: 550px;
     }
 
+    .container-button-downloads {
+        flex-direction: column;
+        width: 215px;
+        margin: auto;
+    }
+
+    .container-button-downloads a {
+        margin-top: 15px;
+    }
+
     #section-trailer{
         width: 550px;
     }
@@ -567,6 +609,7 @@ body button{
     #discord{
         position: relative;
         bottom: 65px;
+        width: min-content;
     }
 
     #intro {
@@ -618,6 +661,7 @@ body button{
         position: relative;
         top: 149px;
         left: 85%;
+        width: min-content;
     }
 
     #discord{
@@ -640,16 +684,6 @@ body button{
     #trailer-yt{
         width: 420px;
         height: 322px;
-    }
-
-    .container-button-downloads {
-        flex-direction: column;
-        width: 215px;
-        margin: auto;
-    }
-
-    .container-button-downloads a {
-        margin-top: 15px;
     }
 
     .slider{
@@ -729,7 +763,76 @@ body button{
     }
 }
 
+/*----------------BREAKPOINT 590 BREAKPOINT----------------*/
+
 @media ( max-width: 590px ) {
+    .true-logo #big-logo {
+        width: 420px;
+    }
+
+    .true-logo #italian {
+        width: 420px;
+    }
+
+    #btn-swap-lingua{
+        display: block;
+        height: 48.8px;
+    }
+
+    #discord{
+        bottom: 165px;
+    }
+
+    #lightbulb-mobile{
+        display: block;
+    }
+
+    #dark-mode-mobile{
+        display: block;
+        left: 178px;
+        bottom: 71px;
+    }
+
+    .container-button-downloads {
+        width: 305px;
+    }
+
+    #swap-language {
+             display: none;
+    }
+
+    .container {
+        width: 96%;
+        top: 181px;
+    }
+
+    .container-info{
+        width: 405px;
+    }
+
+    #section-trailer{
+        width: 405px;
+    }
+
+    #trailer-yt{
+        width: 380px;
+        height: 285px;
+    }
+
+    .slider{
+        max-width: 405px;
+
+    }
+
+    .container-slider{
+        max-width: 395px;
+    }
+
+}
+
+/*----------------BREAKPOINT 450 BREAKPOINT----------------*/
+@media ( max-width: 450px ) {
+
     .true-logo #big-logo {
         width: 340px;
     }
@@ -748,14 +851,29 @@ body button{
         max-height: 70px;
     }
 
+    #discord{
+        bottom: 154px;
+    }
+
     #twitter {
         position: relative;
         top: 111px;
         left: 77.5%;
     }
 
-    #swap-language {
-        display: none;
+    #btn-swap-lingua{
+        display: block;
+        height: 48.8px;
+    }
+
+    #dark-mode-mobile{
+        left: 139px;
+        bottom: 65px;
+    }
+
+
+    .container-button-downloads {
+        width: 275px;
     }
 
     #intro{

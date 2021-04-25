@@ -25,7 +25,7 @@
 
       <div id="modal">
         <div class="modal-header">
-          <button id="swap-lang-modal" onclick="swap_lang(true)">🇮🇹</button>
+          <button id="swap-lang-modal" onclick="swap_lang(true)">🇬🇧</button>
           <div class="title">DISCLAIMER</div>
           <button class="close-button" onclick="confirm(false)">&times;</button>
         </div>
@@ -46,7 +46,7 @@
           <img id="big-logo" src="res/Omori_Logo.webp"/>
           <img id="italian" src="res/logohtml.png"/>
         </div>
-
+        <button id="dark-mode-mobile" onclick="darkMode()"> <img id="lightbulb-mobile" class="dm-off" src="res/lightbulb_Omori.gif"/> </button>
         <a id="discord" href="https://discord.gg/DcPUz9zmbT"> <img src="res/discord.webp"/> </a>
       </div>
 
@@ -70,9 +70,10 @@
 
       <!--SEZIONE PULSANTI DOWNLOAD - FATTA-->
       <div class="container-button-downloads">
-        <a href=""> <div class="btn">Download Installer Windows</div> </a>
-        <a href=""> <div class="btn">Download Installer MAC</div> </a>
-        <a href=""> <div class="btn">Download Cartella MOD</div> </a>
+        <button id="btn-swap-lingua" onclick="swap_lang(false)"></button>
+        <a href=""> <div class="btn">DOWNLOAD INSTALLER WINDOWS</div> </a>
+        <a href=""> <div class="btn">DOWNLOAD INSTALLER MAC</div> </a>
+        <a href=""> <div class="btn">DOWNLOAD MOD NO INSTALLER</div> </a>
       </div>
 
       <!--SEZIONE SPIEGAZIONE PROGETTO - FATTA -->

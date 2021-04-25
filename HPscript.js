@@ -51,13 +51,13 @@ function swap_lang(isModal) {
 
         if(lang == "ENG"){
             document.getElementById('confirm').innerText = "Understand";
-            document.getElementById("swap-lang-modal").innerText = "🇬🇧";
+            document.getElementById("swap-lang-modal").innerText = "🇮🇹";
             document.getElementById('modal-body-p').innerText = text[0];
         }
 
         else{
             document.getElementById('confirm').innerText = "Ho capito";
-            document.getElementById("swap-lang-modal").innerText = "🇮🇹";
+            document.getElementById("swap-lang-modal").innerText = "🇬🇧";
             document.getElementById('modal-body-p').innerText = text[0];
         }
 
@@ -75,15 +75,20 @@ function myFunction(x) {
     if (x.matches) {
         if (lingua == "ENG"){
             document.getElementById('swap-btn').innerText = "CAMBIA LINGUA";
+            document.getElementById('btn-swap-lingua').innerText = "CAMBIA LINGUA";
         }else {
             document.getElementById('swap-btn').innerText = "SWAP LANGUAGE";
+            document.getElementById('btn-swap-lingua').innerText = "SWAP LANGUAGE";
         }
 
     } else {
         if (lingua == "ENG"){
             document.getElementById('swap-btn').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
+            document.getElementById('btn-swap-lingua').innerText = "CLICCA QUI PER CAMBIARE LINGUA";
+
         }else {
             document.getElementById('swap-btn').innerText = "CLICK HERE TO CHANGE LANGUAGE";
+            document.getElementById('btn-swap-lingua').innerText = "CLICK HERE TO CHANGE LANGUAGE";
         }
     }
 }
