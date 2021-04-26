@@ -19,6 +19,7 @@ body{
     font-family: omoriFont;
     max-width: 100vw;
     overflow-x: hidden;
+    word-spacing: 0.3em;
 }
 #background {
     width: 100%;
@@ -202,6 +203,7 @@ body button{
     padding: 4px;
     font-size: 17px;
     transition: all 1s ease;
+    word-spacing: 0.3em;
 }
 
 #swap-btn:hover{
@@ -526,6 +528,7 @@ body button{
     margin-top: -20px;
     text-align: center;
     line-height: 40px;
+    font-family: fantasy;
 }
 
 .slider .left-slide:hover,.slider .right-slide:hover{
