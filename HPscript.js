@@ -29,7 +29,11 @@ function swap_lang(isModal) {
             document.getElementById('project-title').innerText = "THE PROJECT";
             document.getElementById('news').innerText = "NEWS";
             document.getElementById('support').innerText = "SUPPORT";
-            document.getElementById('title-trailer').innerText = "WATCH THE BETA 0.0.3 TRAILER!";
+            document.getElementById('title-trailer').innerText = "WATCH THE TRAILER OF THE DEFINITIVE VERSION!";
+            document.getElementById('form-google').innerText = "CLICK HERE FOR THE GOOGLE FORM";
+            document.getElementById('screen').innerText = "SCREENSHOTS";
+            document.getElementById('contact_people').innerText = "What if I want to contact someone?"
+
         }
 
         else{
@@ -41,7 +45,10 @@ function swap_lang(isModal) {
             document.getElementById('project-title').innerText = "IL PROGETTO";
             document.getElementById('news').innerText = "AGGIORNAMENTI";
             document.getElementById('support').innerText = "SUPPORTO";
-            document.getElementById('title-trailer').innerText = "GUARDA IL TRAILER DELLA BETA 0.0.3!"
+            document.getElementById('title-trailer').innerText = "GUARDA IL TRAILER DELLA VERSIONE DEFINITIVA!";
+            document.getElementById('screen').innerText = "SCREENSHOT";
+            document.getElementById('form-google').innerText = "CLICCA QUI PER IL FORM GOOGLE";
+            document.getElementById('contact_people').innerText = "E se volessi contattare qualcuno?";
         }
     }
 
@@ -246,9 +253,22 @@ function darkMode(flag) {
             "color" : "white"
         });
 
-        $("#swap-btn").css({
+        $("#confirm").css({
             "border" : "2px solid white",
             "background-color" : "black",
+            "color" : "white"
+        });
+
+        $(".support-user").css({
+            "border" : "2px solid white",
+            "color" : "white"
+        });
+
+        $("#contact_people").css({
+            "color" : "white"
+        });
+
+        $("#form-google").css({
             "color" : "white"
         });
 
@@ -414,6 +434,19 @@ function darkMode(flag) {
             "color" : "black"
         });
 
+        $(".support-user").css({
+            "border" : "2px solid black",
+            "color" : "black"
+        });
+
+        $("#contact_people").css({
+            "color" : "black"
+        });
+
+        $("#form-google").css({
+            "color" : "black"
+        });
+
         $("#section-trailer").css({
             "background-color" : "white",
             "border" : "2px solid black"
@@ -501,24 +534,25 @@ function text_array(lang) {
         "Questo progetto non è assolutamente a fini di lucro, e il nostro è un team di fan volontari che desidera solamente rendere questo bellissimo gioco più accessibile ad un pubblico italiano.",
 
         /*QUA CI VA IL PROGETTO*/
-        "Ciao! Questo è un progetto non ufficiale di traduzione in italiano del videogioco OMORI di OMOCAT," +
-        " disponibile su Steam. Dato che l'unica localizzazione ufficiale ad essere stata annunciata è quella giapponese," +
-        " è sorta una serie di progetti di traduzione in altre lingue fatti dai fan, e questo è uno dei tanti. Di base la traduzione" +
-        " è una mod da utilizzare con Gilbert's Mod Loader, anche chiamato GOMORI. (ATTENZIONE: Una volta installato GOMORI, il gioco non sarà più avviabile da OMORI.exe," +
-        " ma dovrete aprirlo dalla libreria di Steam. Perciò avrete bisogno di una copia del gioco LEGITTIMA su Steam.)",
-
+        "Benvenuti sul sito della traduzione italiana NON ufficiale di OMORI, videogioco di OMOCAT e disponibile su Steam. Abbiamo deciso di iniziare " +
+        "la traduzione di questo gioco perché l'unica localizzazione annunciata ufficialmente è stata quella giapponese, coreana e cinese. " +
+        "Ci sembrava oppurtuno permettere anche a chi non conosce l'inglese, di godere di questo splendido titolo. Per installare la traduzione, " +
+        "basta cliccare sul tasto sopra questa sezione e scegliere l'installer appropriato per il proprio sistema operativo. Se avete dubbi o problemi, " +
+        "potete accedere al server discord, oppure consultare la sezione supporto per maggiori delucidazioni!",
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "22/05/2021",
-        "AUGURI CLAUS! Attualmente abbiamo quasi completato l’intera traduzione di OMORI. Mancano infatti solo alcune immagini e varie correzioni per rimuovere definitivamente " +
-        "gli errori di scrittura rimasti. Per maggiori informazioni o per qualsiasi domanda vi consigliamo di unirvi al gruppo DISCORD di cui trovate l’invito in fondo alla pagina :)",
+        "30/05/2021",
+        "Abbiamo rilasciato la versione completa con immagini, dialoghi e descrizioni tradotte interamente in italiano. Nel caso riscontriate errori o ci fossero problemi di natura esterna alla traduzione, " +
+        "consultate la sezione \"supporto\" disponibile poco più in basso. Speriamo che il nostro lavoro possa aver reso onore alla versione inglese di questo spettacolare gioco!",
+
 
         /*SEZIONE CONTATTI*/
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at consectetur delectus dolorem doloremque exercitationem " +
-        "laborum minus placeat, provident quas sunt temporibus! Id, praesentium reiciendis?",
+        "Hai riscontrato dei problemi con l'installer, hai degli errori da segnalare o domande da fare? " +
+        "Qui puoi trovare le risposte che cerchi! Se si hanno richieste un po' più formali, è disponibile anche la nostra email ufficiale:",
 
         /*SEZIONE COPYRIGHT*/
-        "Tutti i diritti riservati (All Rights Reserved in lingua inglese) è una formula con cui il titolare del diritto d'autore dichiara " +
-        "che una determinata opera dell'ingegno non è riproducibile senza la sua espressa autorizzazione."
+        "Tutti i marchi registrati, i nomi relativi a persone, cose o luoghi presenti in qualunque forma all'interno del sito appartengono ai legittimi proprietari (OMOCAT, LLC). " +
+        "Questa è una traduzione non ufficiale  e non a scopo di lucro, senza l'intenzione di snaturare o denigrare l'indirizzo originale del brand. " +
+        "In seguito a qualsiasi sollecitazione da parte del detentore della proprietà intellettuale siamo disposti ad entrare in contratto."
 
     ]
 
@@ -530,25 +564,31 @@ function text_array(lang) {
         "We are absolutely not profiting off of this project, and ours is a team of volunteer fans who just wish to make this beautiful game more accessible to an Italian public.",
 
         /*QUA CI VA IL PROGETTO*/
-        "Hi! This is an unofficial Italian translation project of the videogame OMORI by OMOCAT, available on Steam. Since the only official localization that got announced is the Japanese one, " +
-        "a series of fanmade translation projects popped up, and this is one of many. Our translation is basically a mod to be used with Gilbert's Mod Loader, " +
-        "also known as GOMORI. (NOTE: Once you install GOMORI, you won't be able to start the game by opening OMORI.exe anymore, and instead you'll have to open it from your Steam library. " +
-        "So, you're going to need a LEGIT copy of the game on Steam.)",
+        "Welcome to the unofficial Italian translation website of OMORI, OMOCAT’s videogame, you can retrieve on Steam. " +
+        "We started the translation of this game as the only official versions that have been announced would be the Japanese, Korean and Chinese ones. " +
+        "We thought it would be nice to let non-English speakers appreciate this splendid game. " +
+        "For installing the translation, you should click on this section button and choose the right installer for your operating system. If you have any doubts or problems, contact us on discord, or consult us on this supporting section for any questions!",
+
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "14/04/2021",
-        "HAPPY BDAY CLAUS! " +
-        "Currently we have almost completed the OMORI translation. In fact, only some images and various corrections to remove writing mistakes are missing. " +
-        "For more information or for any question we suggest you to join the DISCORD server of which you find the invite at the end of the page.",
+        "30/05/2021",
+        "We have released the full Italian translation version with images, dialogues and descriptions. " +
+        "In case of occurring mistakes or any problems not related to the translation consult the “support” section below. " +
+        "We hope, with our translation, we will do justice to the English version of this spectacular game!",
 
-        /*SEZIONE CONTATTI*/
-        "Lorem15112651545 ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at consectetur delectus dolorem doloremque exercitationem  " +
-        "laborum minus placeat, provident quas sunt temporibus! Id, praesentium reiciendis?",
+
+    /*SEZIONE CONTATTI*/
+        "Have you encountered problems with the installer, " +
+        "do you have any errors to report or questions to ask? " +
+        "Here you can find the answers you are looking for! If you have a bit more formal requests, our official email is also available:",
 
         /*SEZIONE COPYRIGHT*/
-        "All Rights Reserved (All Rights Reserved in English) is a formula with which the copyright holder declares that a certain intellectual work " +
-        "cannot be reproduced without his express authorization."
-    ]
+
+        "All trademarks registered, names of people, thing and places mentioned in the website belong to their lawful owners (OMOCAT, LLC). " +
+        "This is an unofficial and non-profit translation, with no intention to change or to put down the brand’s original scope. " +
+        "Following any likely suggestion from the holder of the brand’s intellectual property we are willing to be in touch.",
+
+]
 
     if(lang == "ITA"){
         return ita_array;

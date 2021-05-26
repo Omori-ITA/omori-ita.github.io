@@ -2,7 +2,7 @@
 <html lang="it" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>OmoriITA Project</title>
+    <title>Omori in Italiano</title>
     <meta name="google-site-verification" content="oYGM8Yt0vP8EMIimj1Ir2b7i3uPjFk2AP82nsEXKylg" />
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -33,7 +33,6 @@
           <p id="modal-body-p"></p>
           <div id="button-div"><button id="confirm" onclick="confirm(true)">Ho capito</button></div>
         </div>
-
       </div>
 
       <div id="overlay"></div>
@@ -41,13 +40,14 @@
       <!--LOGO SITO E PULSANTI SOCIAL-->
       <div class="header">
         <a id="twitter" href="https://twitter.com/OmoriITA"> <img src="res/twitter.png"/> </a>
-
+        <a id="instagram" href="https://www.instagram.com/omoriita/"> <img src="res/instagram.png"/> </a>
         <div class="true-logo">
           <img id="big-logo" src="res/Omori_Logo.webp"/>
           <img id="italian" src="res/logohtml.png"/>
         </div>
         <button id="dark-mode-mobile" onclick="darkMode(false)"> <img id="lightbulb-mobile" class="dm-off" src="res/lightbulb_Omori.gif"/> </button>
         <a id="discord" href="https://discord.gg/DcPUz9zmbT"> <img src="res/discord.webp"/> </a>
+        <a id="telegram" href="https://twitter.com/OmoriITA"> <img src="res/telegram.png"/> </a>
       </div>
 
       <script type="text/javascript" defer>
@@ -73,7 +73,7 @@
         <button id="btn-swap-lingua" onclick="swap_lang(false)"></button>
         <a href=""> <div class="btn">DOWNLOAD INSTALLER WINDOWS</div> </a>
         <a href=""> <div class="btn">DOWNLOAD INSTALLER MAC</div> </a>
-        <a href=""> <div class="btn">DOWNLOAD MOD NO INSTALLER</div> </a>
+        <a href=""> <div class="btn">DOWNLOAD CARTELLA MOD (NO INSTALLER)</div> </a>
       </div>
 
       <!--SEZIONE SPIEGAZIONE PROGETTO - FATTA -->
@@ -92,17 +92,51 @@
       </div>
 
       <div id="section-trailer">
-        <h1 id="title-trailer">GUARDA IL TRAILER DELLA BETA 0.0.3!</h1>
-        <iframe id="trailer-yt" src="https://www.youtube.com/embed/TWdHF9YPreQ" width="640" height="480"></iframe>
+        <h1 id="title-trailer">GUARDA IL TRAILER DELLA VERSIONE DEFINITIVA!</h1>
+        <iframe id="trailer-yt" src="https://www.youtube.com/embed/5jAYHIfEC0E" width="640" height="480"></iframe>
       </div>
 
       <div class="container-info" id="section-supporto">
         <h1 id="support">SUPPORTO</h1>
         <p id="dati_supporto"></p>
+        <div id="email-box">
+          <h2 id="email">mail@omori-traduzione.it</h2>
+          <hr id="line">
+          <h3 id="contact_people">E se volessi contattare qualcuno? <!--Clicca sulla foto per contattare parlare direttamente su Discord con la persona interessata!--></h3>
+        </div>
+
+        <div id="box-contatti">
+          <a class="support-user" id="ghibbi" href="https://discordapp.com/users/430423118272659467/">
+            <img src="res/user-pic/ghibbi.png">
+            <p class="credits">credits by claus</p>
+            <h1>Ghibbi64</h1>
+          </a>
+          <a class="support-user" id="armor" href="https://discordapp.com/users/567747341671596042/">
+            <img src="res/user-pic/armor.png">
+            <p class="credits">credits by claus</p>
+            <h1>ArmorOfBerserk</h1>
+          </a>
+          <a class="support-user" id="claus" href="https://discordapp.com/users/695523977459662959/">
+            <img src="res/user-pic/claus.jpg">
+            <p class="credits">credits by claus</p>
+            <h1>claus</h1>
+          </a>
+          <a class="support-user" id="ringo" href="https://discordapp.com/users/176773874015272961/">
+            <img src="res/user-pic/ringo.png">
+            <p class="credits">credits by iDawnRunner</p>
+            <h1>Ringoリンゴ</h1>
+          </a>
+        </div>
+
+        <div id="container-form">
+          <a href="https://forms.gle/p2YkbFUybTWM5fUj8"> <div class="btn" id="form-google">CLICCA QUI PER IL FORM GOOGLE</div> </a>
+        </div>
+
+
       </div>
 
       <div class="container-slider">
-        <h1>SCREENSHOT</h1>
+        <h1 id="screen">SCREENSHOT</h1>
         <div class="slider">
           <div class="slider-items" id="slider-item"></div>
           <!-- slider controls -->

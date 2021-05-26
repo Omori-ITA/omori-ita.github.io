@@ -8,7 +8,7 @@
     font-family: "omoriFont";
     font-style: normal;
     font-weight: 400;
-    src: url("res/font/MyUglyHandwriting-Regular.otf");
+    src: url("res/font/simplicity.ttf");
 
 }
 
@@ -138,11 +138,12 @@ body button{
     transition: all 1s ease;
 }
 
-
-
 #twitter{
+    position: relative;
     padding: 0px 10px 10px 10px;
     transition: all 1s ease;
+    left: 64px;
+    width: min-content;
 }
 
 #twitter:hover{
@@ -150,7 +151,10 @@ body button{
 }
 
 #discord {
+    position: relative;
+    bottom: 1px;
     transition: all 1s ease;
+    width: min-content;
 }
 
 #discord:hover{
@@ -158,11 +162,17 @@ body button{
 }
 
 #discord img {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 90px;
+    max-height: 85px;
 }
 
+#instagram:hover{
+    transform: translateY(-10px);
+}
 
+#telegram:hover{
+    transform: translateY(-10px);
+}
 
 .container-button-downloads{
     display: flex;
@@ -178,11 +188,22 @@ body button{
 }
 
 .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 100px;
     border: 3px solid black;
     border-radius: 8px;
     background-color: white;
     padding: 5px;
     font-size: 22px;
+    transition: all 1s ease;
+}
+
+#form-google{
+    margin-bottom: 10px;
+    width: 245px;
     transition: all 1s ease;
 }
 
@@ -203,7 +224,6 @@ body button{
     padding: 4px;
     font-size: 17px;
     transition: all 1s ease;
-    word-spacing: 0.3em;
 }
 
 #swap-btn:hover{
@@ -222,6 +242,7 @@ body button{
     background-color: white;
     padding: 5px;
     font-size: 22px;
+    /*letter-spacing: 3px;*/
     transition: all 1s ease;
 }
 
@@ -241,7 +262,7 @@ body button{
 }
 
 #intro h1{
-    letter-spacing: 15px;
+    /*letter-spacing: 15px;*/
     font-size: 20px;
 }
 
@@ -281,6 +302,11 @@ body button{
     margin-bottom: 50px;
 }
 
+#date{
+    text-align: end;
+    padding: 10px;
+}
+
 #section-supporto{
     margin-top: 50px;
 }
@@ -290,9 +316,10 @@ body button{
     grid-column: 2;
     text-align: center;
     transition: all 1s ease;
+    letter-spacing: 2px;
 }
 
-.container-info p{
+.container-info p :not(.credits){
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row: 2;
@@ -303,7 +330,7 @@ body button{
     transition: all 1s ease;
 }
 
-.container-info h2{
+.container-info h2 :not(#email){
     display: flex;
     flex-wrap: wrap;
     align-content: flex-end;
@@ -342,18 +369,12 @@ body button{
     border-radius: 10px;
 }
 
-
 #novita{
     display: flex;
     flex-wrap: wrap-reverse;
     font-size: 22px;
-}
-
-#dati_supporto{
-    display: flex;
-    flex-wrap: wrap-reverse;
-    font-size: 22px;
-    transition: all 1s ease;
+    text-align: center;
+    margin: 10px;
 }
 
 .copyright{
@@ -384,11 +405,100 @@ body button{
     border: none;
 }
 
-
-
 .close-button:hover{
     color: black;
     background-color: #e7e7e7;
+}
+
+#dati_supporto{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    font-size: 22px;
+    transition: all 1s ease;
+    text-align: center;
+    padding: 5px;
+}
+
+#box-contatti{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 20px auto;
+    justify-content: space-around;
+}
+
+#telegram{
+    position: relative;
+    top: 75px;
+    right: 74px;
+    transition: all 1s ease;
+    width: min-content;
+}
+
+#instagram{
+    position: relative;
+    top: 75px;
+    right: 10px;
+    transition: all 1s ease;
+    width: min-content;
+}
+
+.container-info #email-box{
+    align-items: center;
+    margin: auto;
+    font-size: 24px;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+#box-contatti img{
+    display: flex;
+    width: 255px;
+    height: 255px;
+    margin: auto;
+    justify-content: center;
+}
+
+.support-user{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s ease;
+    text-decoration: none;
+    color: black;
+    transition: all 1s ease;
+}
+
+.support-user img{
+    border-radius: 5px;
+}
+
+.support-user:hover{
+    box-shadow: 0.5px 5px 3px 3px #888888; /*#535353*/
+    transform: translateY(-10px);
+}
+
+#line{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 420px;
+}
+
+#contact_people{
+    text-align: center;
+}
+
+.credits{
+    font-size: 18px;
+    text-align: center;
 }
 
 #modal {
@@ -442,7 +552,6 @@ body button{
     background-color: #e7e7e7;
 }
 
-
 #modal-body {
     display: flex;
     flex-direction: column;
@@ -464,10 +573,11 @@ body button{
 }
 
 #button-div #confirm{
-    width: 85px;
+    width: 90px;
     height: 25px;
     font-size: 20px;
     padding: 2px;
+    /*letter-spacing: 1px;*/
 }
 
 #overlay{
@@ -501,6 +611,7 @@ body button{
 .container-slider h1{
     text-align: center;
     transition: all 1s ease;
+    letter-spacing: 2px;
 }
 
 .container-slider{
@@ -513,6 +624,23 @@ body button{
     bottom: 28px;
     padding: 10px;
     transition: all 1s ease;
+}
+
+#container-form{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#container-form a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#container-form h2{
+    margin: 10px;
 }
 
 .slider .left-slide,.slider .right-slide{
@@ -540,9 +668,11 @@ body button{
 .slider .left-slide{
     left: 30px;
 }
+
 .slider .right-slide{
     right: 30px;
 }
+
 .slider .slider-items .item img{
     max-width: 100%;
     display: block;
@@ -554,10 +684,12 @@ body button{
     50%{transform: scale(2);}
     100%{transform: scale(1);opacity:1}
 }
+
 .slider .slider-items .item{
     display: none;
     position: relative;
 }
+
 .slider .slider-items .item .caption{
     position: absolute;
     width: 100%;
@@ -585,7 +717,7 @@ body button{
 }
 
 /*----------------BREAKPOINT 1120 BREAKPOINT----------------*/
-@media ( max-width: 1120px ) {
+@media ( max-width: 1285px ) {
     .true-logo #big-logo {
         width: 550px;
     }
@@ -602,9 +734,14 @@ body button{
         width: 550px;
     }
 
+    .btn{
+        width: 430px;
+        height: 30px;
+    }
+
     .container-button-downloads {
         flex-direction: column;
-        width: 215px;
+        align-items: center;
         margin: auto;
     }
 
@@ -633,7 +770,7 @@ body button{
 
 
 /*----------------BREAKPOINT 1000 BREAKPOINT----------------*/
-@media ( max-width: 1000px ) {
+@media ( max-width: 1155px ) {
     .container {
         width: 70%;
     }
@@ -650,7 +787,7 @@ body button{
 
 /*----------------BREAKPOINT 950 BREAKPOINT----------------*/
 
-@media ( max-width: 950px ) {
+@media ( max-width: 1090px ) {
     .container {
         width: 70%;
     }
@@ -675,14 +812,27 @@ body button{
 
     #twitter{
         position: relative;
-        top: 158px;
+        top: 225px;
         left: 85%;
     }
 
     #discord{
         position: relative;
+        right: 2px;
         bottom: 65px;
         width: min-content;
+    }
+
+    #instagram{
+        right: 0px;
+        left: 477px;
+        top: 232px;
+    }
+
+    #telegram{
+        right: 0;
+        left: 9px;
+        top: -60px;
     }
 
     #intro {
@@ -730,16 +880,45 @@ body button{
         max-width: 80px;
     }
 
-    #twitter{
-        position: relative;
-        top: 149px;
-        left: 85%;
-        width: min-content;
+    #twitter img{
+        width: 52px;
+        height: 52px;
     }
 
-    #discord{
-        position: relative;
-        bottom: 65px;
+    #twitter{
+        top: 191px;
+        left: 84%;
+    }
+
+    #discord img{
+      /*  position: relative;
+        bottom: 65px;*/
+    }
+
+    #telegram{
+        right: 0;
+        left: 7px;
+        top: -58px;
+    }
+
+    #telegram img{
+        width: 52px;
+        height: 52px;
+    }
+
+    #instagram{
+        left: 388px;
+        top: 200px;
+    }
+
+    #instagram img{
+        width: 52px;
+        height: 52px;
+    }
+
+    #discord img{
+        width: 70px;
+        height: 70px;
     }
 
     #intro h1{
@@ -799,8 +978,18 @@ body button{
 
     #twitter {
         position: relative;
-        top: 128px;
-        left: 79%;
+        top: 169px;
+        left: 82%;
+    }
+
+    .btn{
+        width: 320px;
+        height: 50px;
+    }
+
+    #instagram{
+        left: 322px;
+        top: 179px;
     }
 
     .container {
@@ -834,6 +1023,10 @@ body button{
     .container-slider{
         max-width: 360px;
     }
+
+    #line{
+        width: 280px;
+    }
 }
 
 /*----------------BREAKPOINT 590 BREAKPOINT----------------*/
@@ -849,11 +1042,29 @@ body button{
 
     #btn-swap-lingua{
         display: block;
-        height: 48.8px;
+        width: 336px;
+        height: 66px;
+        padding: 5px;
+        font-size: 22px;
     }
 
     #discord{
         bottom: 165px;
+    }
+
+    #telegram{
+        left: 6.5px;
+        top: -160px;
+
+    }
+
+    #twitter{
+        left: 84%;
+    }
+
+    #instagram{
+        left: 363px;
+        top: 178px;
     }
 
     #lightbulb-mobile{
@@ -930,13 +1141,22 @@ body button{
 
     #twitter {
         position: relative;
-        top: 111px;
-        left: 77.5%;
+        top: 156px;
+        left: 79.5%;
+    }
+
+    #instagram{
+        left: 280px;
+        top: 168px;
+    }
+
+    #telegram{
+        top: -146px;
     }
 
     #btn-swap-lingua{
         display: block;
-        height: 48.8px;
+        height: 66px;
     }
 
     #dark-mode-mobile{
@@ -956,9 +1176,10 @@ body button{
 
     .header {
         position: relative;
-        top: 11px;
+        top: 8px;
         display: block;
         margin-bottom: 0px;
+        height: 355px;
     }
 
     .container {
