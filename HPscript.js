@@ -530,7 +530,7 @@ function text_array(lang) {
 
     ita_array = [
         /*QUA CI VA IL DISCLAIMER*/
-        "OMORI, con tutto il relativo materiale, è di proprietà di OMOCAT e del suo team." +
+        "OMORI, con tutto il relativo materiale, è di proprietà di OMOCAT e del suo team. " +
         "Questo progetto non è assolutamente a fini di lucro, e il nostro è un team di fan volontari che desidera solamente rendere questo bellissimo gioco più accessibile ad un pubblico italiano.",
 
         /*QUA CI VA IL PROGETTO*/
