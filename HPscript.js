@@ -626,7 +626,7 @@ function text_array(lang) {
         /*SEZIONE COPYRIGHT*/
         "Tutti i marchi registrati, i nomi relativi a persone, cose o luoghi presenti in qualunque forma all'interno del sito appartengono ai legittimi proprietari (OMOCAT, LLC). " +
         "Questa è una traduzione non ufficiale  e non a scopo di lucro, senza l'intenzione di snaturare o denigrare l'indirizzo originale del brand. " +
-        "In seguito a qualsiasi sollecitazione da parte del detentore della proprietà intellettuale siamo disposti ad entrare in contratto."
+        "In seguito a qualsiasi sollecitazione da parte del detentore della proprietà intellettuale siamo disposti ad entrare in contatto."
 
     ]
 
