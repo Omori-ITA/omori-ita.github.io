@@ -211,6 +211,19 @@ function darkMode(flag) {
 
         localStorage.setItem('darkMode', true);
 
+        /*DA CANCELLARE POI*/
+        $(".modal-body").css({
+            "background-color" : "black",
+            "color" : "white"
+        });
+
+        $(".modal-header").css({
+            "background-color" : "black",
+            "color" : "white",
+            "border" : "1px solid white",
+        });
+        /*DA CANCELLARE POI*/
+
         $("#lightbulb").css({
             "webkit-filter" : "invert(100%)"
         });
@@ -372,6 +385,19 @@ function darkMode(flag) {
 
         localStorage.setItem('darkMode', false);
 
+        /*DA CANCELLARE POI*/
+        $(".modal-body").css({
+            "background-color" : "white",
+            "color" : "black"
+        });
+
+        $(".modal-header").css({
+            "background-color" : "white",
+            "color" : "black",
+            "border" : "1px solid black",
+        });
+        /*DA CANCELLARE POI*/
+
         $("#lightbulb").css({
             "webkit-filter" : "invert(0%)"
         });
@@ -410,6 +436,10 @@ function darkMode(flag) {
 
         $(".header").css({
             "background-color" : "white"
+        });
+
+        $(".close-button").css({
+            "color" : "black"
         });
 
         $("#intro-title").css({
@@ -502,6 +532,30 @@ function darkMode(flag) {
 
 }
 
+function openPopUp(){
+    $("#modal-temp").css({
+        "transform": "translate(-50%, -50%) scale(1)"
+    });
+
+    $("#overlay").css({
+        "pointer-events" : "all",
+        "opacity": "2",
+        "z-index" : "11"
+    });
+}
+
+function closePopUp() {
+    $("#modal-temp").css({
+        "transform": "translate(-50%, -50%) scale(0)"
+    });
+
+    $("#overlay").css({
+        "pointer-events" : "none",
+        "opacity": "0",
+        "z-index" : "0"
+    });
+}
+
 function showDisclaimer() {
     let saveChoice = localStorage.getItem('preference');
 
@@ -556,9 +610,13 @@ function text_array(lang) {
         "basta cliccare sul tasto sopra questa sezione e scegliere l'installer appropriato per il proprio sistema operativo. Se avete dubbi o problemi, " +
         "potete accedere al server discord, oppure consultare la sezione supporto per maggiori delucidazioni!",
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "04/06/2021",
+    /*    "04/06/2021",
         "Abbiamo rilasciato la versione completa con immagini, dialoghi e descrizioni tradotte interamente in italiano. Nel caso riscontriate errori o ci fossero problemi di natura esterna alla traduzione, " +
-        "consultate la sezione \"supporto\" disponibile poco più in basso. Speriamo che il nostro lavoro possa aver reso onore alla versione inglese di questo spettacolare gioco!",
+        "consultate la sezione \"supporto\" disponibile poco più in basso. Speriamo che il nostro lavoro possa aver reso onore alla versione inglese di questo spettacolare gioco!",*/
+
+        "02/06/2021",
+        "I lavori sono FINALMENTE ultimati. Siamo pronti a far uscire la prima versione definitiva della patch in italiano di Omori, " +
+        "il 4 Giugno 2021. Speriamo che l’intera esperienza posso essere di vostro gradimento!",
 
 
         /*SEZIONE CONTATTI*/
@@ -587,10 +645,13 @@ function text_array(lang) {
 
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "04/06/2021",
+ /*       "04/06/2021",
         "We have released the full Italian translation version with images, dialogues and descriptions. " +
         "In case of occurring mistakes or any problems not related to the translation consult the “support” section below. " +
-        "We hope, with our translation, we will do justice to the English version of this spectacular game!",
+        "We hope, with our translation, we will do justice to the English version of this spectacular game!",*/
+        "02/06/2021",
+        "The works are FINALLY completed. We are ready to release the first definitive version of the Omori Italian patch on June 4, 2021. " +
+        "We hope that the whole experience can be to your liking!",
 
 
     /*SEZIONE CONTATTI*/

@@ -29,9 +29,31 @@
           <div class="title">DISCLAIMER</div>
           <button class="close-button" onclick="confirm(false)">&times;</button>
         </div>
-        <div id="modal-body">
+        <div class="modal-body">
           <p id="modal-body-p"></p>
           <div id="button-div"><button id="confirm" onclick="confirm(true)">Ho capito</button></div>
+        </div>
+      </div>
+
+      <!--AAAAAAAAAAAAAAAAA TEMPORANEO DA CANCELLARE POI AAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
+      <div id="modal-temp">
+        <div class="modal-header">
+          <div class="title">NOPE.</div>
+          <button class="close-button" onclick="closePopUp()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-body-p" style="
+              font-size: 25px;
+              text-align: center;
+               padding: 10px; ">
+            Il gioco uscirà il 4 Giugno 2021, come specificato sui nostri profili social. Per favore, pazienta un po',
+            ne verrà la pena!
+            <br>
+            _____________________
+            <br>
+            The game will be released on June 4, 2021, as specified on our social profiles. Please be patient a little,
+            it will be worth it!
+          </p>
         </div>
       </div>
 
@@ -71,9 +93,9 @@
       <!--SEZIONE PULSANTI DOWNLOAD - FATTA-->
       <div class="container-button-downloads">
         <button id="btn-swap-lingua" onclick="swap_lang(false)"></button>
-        <a href=""> <div class="btn">DOWNLOAD INSTALLER WINDOWS</div> </a>
-        <a href=""> <div class="btn">DOWNLOAD MOD MAC (NO INSTALLER)</div> </a>
-        <a href=""> <div class="btn">DOWNLOAD CARTELLA MOD (NO INSTALLER)</div> </a>
+        <a href="#" onclick="openPopUp()"> <div class="btn">DOWNLOAD INSTALLER WINDOWS</div> </a>
+        <a href="#" onclick="openPopUp()"> <div class="btn">DOWNLOAD MOD MAC (NO INSTALLER)</div> </a>
+        <a href="#" onclick="openPopUp()"> <div class="btn">DOWNLOAD CARTELLA MOD (NO INSTALLER)</div> </a>
       </div>
 
       <!--SEZIONE SPIEGAZIONE PROGETTO - FATTA -->
@@ -92,8 +114,10 @@
       </div>
 
       <div id="section-trailer">
-        <h1 id="title-trailer">GUARDA IL TRAILER DELLA VERSIONE DEFINITIVA!</h1>
-        <iframe id="trailer-yt" src="https://www.youtube.com/embed/5jAYHIfEC0E" width="640" height="480"></iframe>
+        <!--<h1 id="title-trailer">GUARDA IL TRAILER DELLA VERSIONE DEFINITIVA!</h1>-->
+        <h1 id="title-trailer">GUARDA IL TRAILER DELLA VERSIONE 0.0.3!</h1>
+        <!--<iframe id="trailer-yt" src="https://www.youtube.com/embed/5jAYHIfEC0E" width="640" height="480"></iframe>-->
+        <iframe id="trailer-yt" src="https://www.youtube.com/embed/TWdHF9YPreQ" width="640" height="480"></iframe>
       </div>
 
       <div class="container-info" id="section-supporto">
@@ -129,7 +153,8 @@
         </div>
 
         <div id="container-form">
-          <a href="https://forms.gle/p2YkbFUybTWM5fUj8"> <div class="btn" id="form-google">CLICCA QUI PER IL FORM GOOGLE</div> </a>
+          <!--<a href="https://forms.gle/p2YkbFUybTWM5fUj8"> <div class="btn" id="form-google">CLICCA QUI PER IL FORM GOOGLE</div> </a>-->
+          <a href="#" onclick="openPopUp()"> <div class="btn" id="form-google">CLICCA QUI PER IL FORM GOOGLE</div> </a>
         </div>
 
 
