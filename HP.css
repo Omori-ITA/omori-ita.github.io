@@ -704,6 +704,27 @@ body button{
 
 }
 
+#credit-site{
+    background-color: white;
+    width: 335px;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 1s ease;
+}
+
+#credit-site-parag{
+    color: black;
+    font-weight: 900;
+    font-size: 25px;
+}
+
 .slider .slider-items .item.active{
     display: block;
 }
@@ -736,7 +757,7 @@ body button{
 
     .btn{
         width: 430px;
-        height: 30px;
+        height: 70px;
     }
 
     .container-button-downloads {
@@ -877,7 +898,7 @@ body button{
     }
 
     #swap-btn {
-        max-width: 80px;
+        max-width: 90px;
     }
 
     #twitter img{
@@ -970,7 +991,7 @@ body button{
     }
 
     #swap-btn {
-        width: 20px;
+        width: 25px;
         display: flex;
         overflow-wrap: anywhere;
         font-size: 15px;
@@ -1026,6 +1047,11 @@ body button{
 
     #line{
         width: 280px;
+    }
+
+    #credit-site{
+        position: relative;
+        bottom: -115px;
     }
 }
 

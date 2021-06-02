@@ -358,6 +358,14 @@ function darkMode(flag) {
             "color" : "white"
         });
 
+        $("#credit-site").css({
+            "background-color" : "black"
+        });
+
+        $("#credit-site-parag").css({
+            "color" : "white"
+        });
+
     }
 
     else{
@@ -482,6 +490,14 @@ function darkMode(flag) {
         $("#paragraph-copyright").css({
             "color" : "black"
         });
+
+        $("#credit-site").css({
+            "background-color" : "white"
+        });
+
+        $("#credit-site-parag").css({
+            "color" : "black"
+        });
     }
 
 }
@@ -540,7 +556,7 @@ function text_array(lang) {
         "basta cliccare sul tasto sopra questa sezione e scegliere l'installer appropriato per il proprio sistema operativo. Se avete dubbi o problemi, " +
         "potete accedere al server discord, oppure consultare la sezione supporto per maggiori delucidazioni!",
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "30/05/2021",
+        "04/06/2021",
         "Abbiamo rilasciato la versione completa con immagini, dialoghi e descrizioni tradotte interamente in italiano. Nel caso riscontriate errori o ci fossero problemi di natura esterna alla traduzione, " +
         "consultate la sezione \"supporto\" disponibile poco più in basso. Speriamo che il nostro lavoro possa aver reso onore alla versione inglese di questo spettacolare gioco!",
 
@@ -571,7 +587,7 @@ function text_array(lang) {
 
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "30/05/2021",
+        "04/06/2021",
         "We have released the full Italian translation version with images, dialogues and descriptions. " +
         "In case of occurring mistakes or any problems not related to the translation consult the “support” section below. " +
         "We hope, with our translation, we will do justice to the English version of this spectacular game!",
