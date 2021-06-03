@@ -147,7 +147,7 @@ function loadImage() {
     var insideCard = document.createElement('div');
     insideCard.className = "item active";
 
-    for (var i = 0; i < 19; i++) {
+    for (var i = 0; i < 18; i++) {
         var img = document.createElement('img');
         img.src = "res/screenshot/CATTURA" + i + ".jpg";
 
