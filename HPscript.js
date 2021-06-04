@@ -137,14 +137,6 @@ function load_page() {
 
 }
 
-function alertVersionMac() {
-    window.alert("Per problemi tecnici, la versione della traduzione in italiano per MAC, non è disponibile PER ORA. \n" +
-        "\nCi dispiace per il disguido, vedremo di correggere l'errore al piu' presto. Grazie per la pazienza")
-}
-
-
-
-
 //CARICA LE IMMAGINI DELLA SEZIONE SCREENSHOT
 function loadImage() {
 
