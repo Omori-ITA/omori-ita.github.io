@@ -138,8 +138,8 @@ function load_page() {
 }
 
 function alertVersionMac() {
-    alert("Per problemi tecnici, la versione della traduzione in italiano per MAC, non è disponibile PER ORA. \n" +
-        "\nCi dispiace per l'eventuale disguido, vedremo di correggere l'errore al piu' presto.")
+    window.alert("Per problemi tecnici, la versione della traduzione in italiano per MAC, non è disponibile PER ORA. \n" +
+        "\nCi dispiace per il disguido, vedremo di correggere l'errore al piu' presto. Grazie per la pazienza")
 }
 
 
