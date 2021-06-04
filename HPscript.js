@@ -30,7 +30,7 @@ function swap_lang(isModal) {
             document.getElementById('news').innerText = "NEWS";
             document.getElementById('support').innerText = "SUPPORT";
             document.getElementById('title-trailer').innerText = "WATCH THE TRAILER OF THE DEFINITIVE VERSION!";
-            document.getElementById('form-google').innerText = "CLICK HERE FOR THE GOOGLE FORM";
+            document.getElementById('form-google').innerText = "CLICK HERE TO REPORT YOUR ERRORS";
             document.getElementById('screen').innerText = "SCREENSHOTS";
             document.getElementById('contact_people').innerText = "What if I want to contact someone?"
 
@@ -47,7 +47,7 @@ function swap_lang(isModal) {
             document.getElementById('support').innerText = "SUPPORTO";
             document.getElementById('title-trailer').innerText = "GUARDA IL TRAILER DELLA VERSIONE DEFINITIVA!";
             document.getElementById('screen').innerText = "SCREENSHOT";
-            document.getElementById('form-google').innerText = "CLICCA QUI PER IL FORM GOOGLE";
+            document.getElementById('form-google').innerText = "CLICCA QUI PER SEGNALARE I TUOI ERRORI";
             document.getElementById('contact_people').innerText = "E se volessi contattare qualcuno?";
         }
     }
@@ -588,8 +588,9 @@ function text_array(lang) {
         "consultate la sezione \"supporto\" disponibile poco più in basso. Speriamo che il nostro lavoro possa aver reso onore alla versione inglese di questo spettacolare gioco!",
 
         /*SEZIONE CONTATTI*/
-        "Hai riscontrato dei problemi con l'installer, hai degli errori da segnalare o domande da fare? " +
-        "Qui puoi trovare le risposte che cerchi! Se si hanno richieste un po' più formali, è disponibile anche la nostra email ufficiale:",
+        "Hai riscontrato dei problemi con l'installer, con il sito oppure hai degli errori da riportare? " +
+        "Clicca sul pulsante alla fine di questa sezione, per segnalare gli errori tramite un form di Google. " +
+        "Per richieste più formali, è disponibile anche la nostra email ufficiale:",
 
         /*SEZIONE COPYRIGHT*/
         "Tutti i marchi registrati, i nomi relativi a persone, cose o luoghi presenti in qualunque forma all'interno del sito appartengono ai legittimi proprietari (OMOCAT, LLC). " +
@@ -619,9 +620,9 @@ function text_array(lang) {
         "We hope, with our translation, we will do justice to the English version of this spectacular game!",
 
     /*SEZIONE CONTATTI*/
-        "Have you encountered problems with the installer, " +
-        "do you have any errors to report or questions to ask? " +
-        "Here you can find the answers you are looking for! If you have a bit more formal requests, our official email is also available:",
+        "Have you encountered problems with the installer, with the site or do you have any errors to report? " +
+        "Click on the button at the end of this section, to report errors via a Google form. " +
+        "For more formal requests, our official email is also available:",
 
         /*SEZIONE COPYRIGHT*/
 
