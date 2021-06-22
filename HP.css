@@ -32,7 +32,10 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    image-rendering: optimizespeed;
+    /*FOR MOZILLA*/
+    image-rendering: crisp-edges;
+    /*FOR CHROME*/
+    image-rendering: pixelated;
 }
 
 body button{
@@ -406,7 +409,6 @@ body button{
 }
 
 .close-button:hover{
-    color: black;
     background-color: #e7e7e7;
 }
 
@@ -539,7 +541,6 @@ body button{
     width: 25px;
     height: 25px;
     border-radius: 5px;
-    color: black;
 }
 
 #confirm{

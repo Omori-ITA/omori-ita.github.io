@@ -249,17 +249,13 @@ function darkMode(flag) {
             "border" : "1px solid white",
         });
 
-        $(".close-button").css({
-            "color" : "white"
-        });
-
         $(".close-button:hover").css({
+            "color" : "black",
             "background-color": "white"
+
         });
 
-        $("#confirm").css({
-            "border" : "2px solid white",
-            "background-color" : "black",
+        $(".close-button").css({
             "color" : "white"
         });
 
