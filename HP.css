@@ -51,6 +51,7 @@ body button{
     border-radius: 20px;
     /*QUELLO GIUSTO*/
     transition: all 1s ease;
+    letter-spacing: 3px;
 }
 
 #lang{
@@ -194,8 +195,8 @@ body button{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
-    height: 100px;
+    width: 205px;
+    height: 125px;
     border: 3px solid black;
     border-radius: 8px;
     background-color: white;
@@ -1006,7 +1007,7 @@ body button{
 
     .btn{
         width: 320px;
-        height: 50px;
+        height: 85px;
     }
 
     #instagram{

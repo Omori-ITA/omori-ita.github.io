@@ -575,14 +575,14 @@ function text_array(lang) {
         /*QUA CI VA IL PROGETTO*/
         "Benvenuti sul sito della traduzione italiana NON ufficiale di OMORI, videogioco di OMOCAT e disponibile su Steam. Abbiamo deciso di iniziare " +
         "la traduzione di questo gioco perché l'unica localizzazione annunciata ufficialmente è stata quella giapponese, coreana e cinese. " +
-        "Ci sembrava oppurtuno permettere anche a chi non conosce l'inglese, di godere di questo splendido titolo. Per installare la traduzione, " +
+        "Ci sembrava opportuno permettere anche a chi non conosce l'inglese, di godere di questo splendido titolo. Per installare la traduzione, " +
         "basta cliccare sul tasto sopra questa sezione e scegliere l'installer appropriato per il proprio sistema operativo. Se avete dubbi o problemi, " +
         "potete accedere al server discord, oppure consultare la sezione supporto per maggiori delucidazioni!",
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "04/06/2021",
-        "Abbiamo rilasciato la versione completa con immagini, dialoghi e descrizioni tradotte interamente in italiano. Nel caso riscontriate errori o ci fossero problemi di natura esterna alla traduzione, " +
-        "consultate la sezione \"supporto\" disponibile poco più in basso. Speriamo che il nostro lavoro possa aver reso onore alla versione inglese di questo spettacolare gioco!",
-
+        "10/07/2021",
+        "RILASCIATA LA VERSIONE DELLA TRADUZIONE 1.1, CON PIU' DI 300 ERRORI CORRETTI! Ormai è passato più di un mese da quando abbiamo rilasciato la versione 1.0 " +
+        "della traduzione non ufficiale di Omori. Grazie tante per l'affetto e il supporto che avete dedicato al progetto. In tutto questo tempo, non ci siamo fermati " +
+        "ma abbiamo continuato a correggere la traduzione anche grazie alle vostre segnalazioni. Grazie ancora per tutto il supporto e per l'affetto che ci avete dimostrato. <3",
         /*SEZIONE CONTATTI*/
         "Hai riscontrato dei problemi con l'installer, con il sito oppure hai degli errori da riportare? " +
         "Clicca sul pulsante alla fine di questa sezione, per segnalare gli errori tramite un form di Google. " +
@@ -610,10 +610,12 @@ function text_array(lang) {
 
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "04/06/2021",
-        "We have released the full Italian translation version with images, dialogues and descriptions. " +
-        "In case of occurring mistakes or any problems not related to the translation consult the “support” section below. " +
-        "We hope, with our translation, we will do justice to the English version of this spectacular game!",
+        "10/07/2021",
+        "RELEASED THE TRANSLATION VERSION 1.1, WITH MORE THAN 300 CORRECTED ERRORS! " +
+        "It's been over a month since the released version 1.0 of the unofficial  translation of OMORI. " +
+        "Thank you a lot for the affection and support you have dedicated to the project. For all this time, " +
+        "we didn't stop but continued to correct the translation also thanks to your reports. Thank you again " +
+        "for all the support and affection that you've shown us <3",
 
     /*SEZIONE CONTATTI*/
         "Have you encountered problems with the installer, with the site or do you have any errors to report? " +
