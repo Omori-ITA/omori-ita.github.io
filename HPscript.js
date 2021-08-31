@@ -580,7 +580,7 @@ function text_array(lang) {
         "potete accedere al server discord, oppure consultare la sezione supporto per maggiori delucidazioni!",
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
         "31/08/2021",
-        "Siamo leti di annunciare che la versione 1.2 della traduzione non ufficiale di Omori, è stata rilasciata. " +
+        "Siamo lieti di annunciare che la versione 1.2 della traduzione non ufficiale di Omori, è stata rilasciata. " +
         "Son stati corretti tantissimi errori e son stati aggiustati i giochi di parole. Grazie per i 1000+ downloads, " +
         "ci state ripagando di tutti gli sforzi. <3",
         /*SEZIONE CONTATTI*/
