@@ -579,10 +579,10 @@ function text_array(lang) {
         "basta cliccare sul tasto sopra questa sezione e scegliere l'installer appropriato per il proprio sistema operativo. Se avete dubbi o problemi, " +
         "potete accedere al server discord, oppure consultare la sezione supporto per maggiori delucidazioni!",
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "10/07/2021",
-        "RILASCIATA LA VERSIONE DELLA TRADUZIONE 1.1, CON PIU' DI 300 ERRORI CORRETTI! Ormai è passato più di un mese da quando abbiamo rilasciato la versione 1.0 " +
-        "della traduzione non ufficiale di Omori. Grazie tante per l'affetto e il supporto che avete dedicato al progetto. In tutto questo tempo, non ci siamo fermati " +
-        "ma abbiamo continuato a correggere la traduzione anche grazie alle vostre segnalazioni. Grazie ancora per tutto il supporto e per l'affetto che ci avete dimostrato. <3",
+        "31/08/2021",
+        "Siamo leti di annunciare che la versione 1.2 della traduzione non ufficiale di Omori, è stata rilasciata. " +
+        "Son stati corretti tantissimi errori e son stati aggiustati i giochi di parole. Grazie per i 1000+ downloads, " +
+        "ci state ripagando di tutti gli sforzi. <3",
         /*SEZIONE CONTATTI*/
         "Hai riscontrato dei problemi con l'installer, con il sito oppure hai degli errori da riportare? " +
         "Clicca sul pulsante alla fine di questa sezione, per segnalare gli errori tramite un form di Google. " +
@@ -610,12 +610,10 @@ function text_array(lang) {
 
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "10/07/2021",
-        "RELEASED THE TRANSLATION VERSION 1.1, WITH MORE THAN 300 CORRECTED ERRORS! " +
-        "It's been over a month since the released version 1.0 of the unofficial  translation of OMORI. " +
-        "Thank you a lot for the affection and support you have dedicated to the project. For all this time, " +
-        "we didn't stop but continued to correct the translation also thanks to your reports. Thank you again " +
-        "for all the support and affection that you've shown us <3",
+        "31/08/2021",
+        "We are pleased to announce that version 1.2 of the unofficial translation of Omori has been released. " +
+        "A lot of mistakes have been corrected and puns have been fixed. " +
+        "Thanks for the 1000+ downloads, you are paying us back for all the efforts. <3",
 
     /*SEZIONE CONTATTI*/
         "Have you encountered problems with the installer, with the site or do you have any errors to report? " +
