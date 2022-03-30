@@ -9,6 +9,7 @@ function swap_lang(isModal) {
     document.getElementById('lang').innerText = lang;
     var text = text_array(lang);
 
+    const string_en = ["SUMMARY", "THE PROJECT", "NEWS", "WATCH THE TRAILER OF THE DEFINITIVE VERSION!", "SUPPORT", "What if I want to contact someone?", "SCREENSHOTS"]
     var winWidth = $(window).width();
 
     if(!isModal){
@@ -20,35 +21,61 @@ function swap_lang(isModal) {
         document.getElementById('dati_supporto').innerText = text[4];
         document.getElementById('paragraph-copyright').innerText = text[5];
 
+        for (let i = 1; i < 17; i++){
+            document.getElementById("f" + i).innerText = text[i+5];
+        }
+
         if (lang == "ENG"){
+
 
             index = 0;
             document.getElementById("intro-title").innerText = " ";
             stringa = "WELCOME TO WHITE SPACE";
 
-            document.getElementById('project-title').innerText = "THE PROJECT";
-            document.getElementById('news').innerText = "NEWS";
+            for (let i = 0; i < 7; i++){
+
+                if (i != 3 && i != 5){
+                        console.log(document.getElementById("fast-summary").children.item(i).children.item(0))
+                        if (document.getElementById("fast-summary").children.item(i).children.item(0) != null)
+                        document.getElementById("fast-summary").children.item(i).children.item(0).innerText = string_en[i]
+                    }
+            }
+
+            document.getElementById('project-title').innerText = string_en[1];
+            document.getElementById('news').innerText = string_en[2];
             document.getElementById('support').innerText = "SUPPORT";
-            document.getElementById('title-trailer').innerText = "WATCH THE TRAILER OF THE DEFINITIVE VERSION!";
+            document.getElementById('title-trailer').innerText = string_en[3];
             document.getElementById('form-google').innerText = "CLICK HERE TO REPORT YOUR ERRORS";
-            document.getElementById('screen').innerText = "SCREENSHOTS";
-            document.getElementById('contact_people').innerText = "What if I want to contact someone?"
+            document.getElementById('screen').innerText = string_en[6];
+            document.getElementById('contact_people').innerText = string_en[5];
+
 
         }
 
         else{
 
             index = 0;
+            const string_it = ["SOMMARIO", "IL PROGETTO", "AGGIORNAMENTI", "GUARDA IL TRAILER DELLA VERSIONE DEFINITIVA!", "SUPPORTO", "E se volessi contattare qualcuno?", "SCREENSHOT"]
+
             document.getElementById("intro-title").innerText = " ";
             stringa = "BENVENUTO NELLO SPAZIO BIANCO";
 
-            document.getElementById('project-title').innerText = "IL PROGETTO";
-            document.getElementById('news').innerText = "AGGIORNAMENTI";
+            for (let i = 0; i < 7; i++){
+
+                if (i != 3 && i != 5){
+                    console.log(document.getElementById("fast-summary").children.item(i).children.item(0))
+                    if (document.getElementById("fast-summary").children.item(i).children.item(0) != null)
+                        document.getElementById("fast-summary").children.item(i).children.item(0).innerText = string_it[i]
+                }
+            }
+
+            document.getElementById('project-title').innerText = string_it[1];
+            document.getElementById('news').innerText = string_it[2];
             document.getElementById('support').innerText = "SUPPORTO";
-            document.getElementById('title-trailer').innerText = "GUARDA IL TRAILER DELLA VERSIONE DEFINITIVA!";
-            document.getElementById('screen').innerText = "SCREENSHOT";
+            document.getElementById('title-trailer').innerText = string_it[3];
             document.getElementById('form-google').innerText = "CLICCA QUI PER SEGNALARE I TUOI ERRORI";
-            document.getElementById('contact_people').innerText = "E se volessi contattare qualcuno?";
+            document.getElementById('screen').innerText = string_it[6];
+            document.getElementById('contact_people').innerText = string_it[5];
         }
     }
 
@@ -135,6 +162,11 @@ function load_page() {
     /*Posizione 5 per il testo in copyright*/
     document.getElementById('paragraph-copyright').innerText = temp[5];
 
+    for (let i = 1; i < 17; i++){
+        document.getElementById("f" + i).innerText = temp[i+5];
+    }
+
+
 }
 
 //CARICA LE IMMAGINI DELLA SEZIONE SCREENSHOT
@@ -212,6 +244,25 @@ function darkMode(flag) {
         $(".modal-body").css({
             "background-color" : "black",
             "color" : "white"
+        });
+
+        $(".quest").css({
+            "color" : "white"
+        });
+
+        $(".ans").css({
+            "color" : "white"
+        });
+
+        $("#fast-summary").css({
+            "background" : "black",
+            "color" : "white"
+        });
+
+        $("#swap-btn").css({
+            "background" : "black",
+            "color" : "white",
+            "border" : "2px solid white"
         });
 
         $(".modal-header").css({
@@ -333,6 +384,16 @@ function darkMode(flag) {
             "border" : "2px solid white"
         });
 
+        $(".section-site").css({
+            "border": "1px solid white",
+            "color": "white",
+            "background": "black"
+        });
+
+        $(".text-section").css({
+            "color": "white"
+        });
+
         $("#title-trailer").css({
             "color" : "white"
         });
@@ -382,6 +443,29 @@ function darkMode(flag) {
         $(".modal-body").css({
             "background-color" : "white",
             "color" : "black"
+        });
+
+        $("#fast-summary").css({
+            "background" : "white",
+            "color" : "black"
+        });
+
+        $(".section-site").css({
+            "border": "1px solid black",
+            "color": "black",
+            "background": "white"
+        });
+
+        $(".quest").css({
+            "color" : "black"
+        });
+
+        $(".ans").css({
+            "color" : "black"
+        });
+
+        $(".text-section").css({
+            "color": "black"
         });
 
         $(".modal-header").css({
@@ -579,10 +663,10 @@ function text_array(lang) {
         "basta cliccare sul tasto sopra questa sezione e scegliere l'installer appropriato per il proprio sistema operativo. Se avete dubbi o problemi, " +
         "potete accedere al server discord, oppure consultare la sezione supporto per maggiori delucidazioni!",
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "31/08/2021",
-        "Siamo lieti di annunciare che la versione 1.25 della traduzione non ufficiale di Omori, è stata rilasciata. " +
-        "Son stati corretti tantissimi errori e son stati aggiustati i giochi di parole. Grazie per i 1000+ downloads, " +
-        "ci state ripagando di tutti gli sforzi. <3",
+        "31/03/2022",
+        "Oggi è stata rilasciata la sezione FAQ! Nel frattempo, anche dopo l'uscita della versione 1.25, " +
+        "siamo a lavoro per rilasciare quella che speriamo sia l'ultima versione, riveduta e corretta anche grazie al vostro contributo! " +
+        "Grazie per i 2500+ download, ci state ripagando di tutti gli sforzi. <3",
         /*SEZIONE CONTATTI*/
         "Hai riscontrato dei problemi con l'installer, con il sito oppure hai degli errori da riportare? " +
         "Clicca sul pulsante alla fine di questa sezione, per segnalare gli errori tramite un form di Google. " +
@@ -591,7 +675,42 @@ function text_array(lang) {
         /*SEZIONE COPYRIGHT*/
         "Tutti i marchi registrati, i nomi relativi a persone, cose o luoghi presenti in qualunque forma all'interno del sito appartengono ai legittimi proprietari (OMOCAT, LLC). " +
         "Questa è una traduzione non ufficiale  e non a scopo di lucro, senza l'intenzione di snaturare o denigrare l'indirizzo originale del brand. " +
-        "In seguito a qualsiasi sollecitazione da parte del detentore della proprietà intellettuale siamo disposti ad entrare in contatto."
+        "In seguito a qualsiasi sollecitazione da parte del detentore della proprietà intellettuale siamo disposti ad entrare in contatto.",
+
+        /*FAQ*/
+        "La mod è utilizzabile con la versione craccata del gioco?",
+        "No, la nostra mod non è compatibile con la versione pirata del gioco." +
+        "Inoltre, non supportiamo in alcun modo la pirateria e non siamo responsabili di malfunzionamenti o danni arrecati alle vostre proprietà.\n\n" ,
+
+        "L'utilizzo della mod altera o esclude l'ottenimento di trofei e obiettivi?" ,
+        "No, questa mod non altera in nessun modo l'ottenimento dei trofei, esattamente come non corrompe i salvataggi o altro.\n\n" ,
+
+        "Posso usare altre mod insieme alla patch di traduzione?" ,
+        "Si possono usare altre mod insieme alla mod di traduzione italiana?"+
+        "Consigliamo di no. Visto che la nostra mod sostituisce la maggior parte dei file di gioco, potrebbero esserci"+
+        "parti non tradotte o altri problemi.\n\n",
+
+        "L'installer non funziona/mi da problemi, cosa posso fare?" ,
+        "Per qualsiasi malfunzionamento, si prega di contattarci alla nostra mail presente qua sotto, entrare nel nostro server discord," +
+        "oppure mandare una richiesta nel form google, facendo attenzione ad inserire la propria mail (Altrimenti non possiamo ricontattarvi!)\n\n" ,
+
+
+        "ERRORI DOPO AVER INSTALLATO LA MOD" ,
+
+        "- Errore: Invalid key lengh - " ,
+        "È stato avviato il gioco direttamente dall'eseguibile (omori.exe) e non tramite il " +
+        "collegamento reso creato da Steam (o tramite la pagina di gioco). In entrambi i casi la soluzione è avviare il gioco da Steam.\n\n" ,
+
+        "- Errore: Invalid IV lengh - " ,
+        "Quest'errore è causato da un errore nei file di gioco non meglio specificato. Consigliamo di" +
+        "reinstallare il gioco, facendo prima attenzione a fare un backup della cartella \"save\" presente in \"Omori/www/\".\n\n" ,
+
+        "- Errore: ENOENT, no such file or directory - " ,
+        "Errore causato dalla mancanza della cartella \"save" +
+        "all'interno dei file di gioco. Avvia il gioco una prima volta, poi installa la mod e il tutto dovrebbe procedere senza intoppi.\n\n" ,
+
+        "Nel caso in cui le informazioni non siano state molto chiare o aveste bisogno di ulteriore supporto," +
+        "siano sempre disponibili, sia tramite discord, sia tramite email a darvi una mano!" ,
 
     ]
 
@@ -610,10 +729,10 @@ function text_array(lang) {
 
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "31/08/2021",
-        "We are pleased to announce that version 1.25 of the unofficial translation of Omori has been released. " +
-        "A lot of mistakes have been corrected and puns have been fixed. " +
-        "Thanks for the 1000+ downloads, you are paying us back for all the efforts. <3",
+        "31/03/2022",
+        "Today the FAQ section has been released! Meanwhile, even after the release of version 1.25, " +
+        "we are working to release what we hope will be the last version, revised and corrected also thanks to your contribution! " +
+        "Thanks for the 2500+ downloads, you are repaying us for all our efforts. <3",
 
     /*SEZIONE CONTATTI*/
         "Have you encountered problems with the installer, with the site or do you have any errors to report? " +
@@ -621,10 +740,42 @@ function text_array(lang) {
         "For more formal requests, our official email is also available:",
 
         /*SEZIONE COPYRIGHT*/
-
         "All trademarks registered, names of people, thing and places mentioned in the website belong to their lawful owners (OMOCAT, LLC). " +
         "This is an unofficial and non-profit translation, with no intention to change or to put down the brand’s original scope. " +
         "Following any likely suggestion from the holder of the brand’s intellectual property we are willing to be in touch.",
+
+        /*FAQ*/
+        "Is the mod usable with the cracked version of the game?",
+        "No, our mod is not compatible with the pirated version of the game." +
+        "Also, we do not support piracy in any way and are not responsible for malfunctions or damage done to your property.\n\n",
+
+        "Does using the mod alter or exclude getting trophies and achievements?",
+        "No, this mod does not alter in any way the obtaining of trophies, just as it does not corrupt saves or anything else.\n\n",
+
+
+        "Can other mods be used along with the Italian translation mod?",
+        "We recommend no. Since our mod replaces most of the game files, there might be "+
+        "untranslated parts or other problems.\n\n",
+
+        "The installer doesn't work/gives me problems, what can I do?",
+        "For any malfunction, please contact us at our email below, join our discord server,"+
+        "or send a request in the google form, making sure to enter your email (Otherwise we can not contact you!).\n\n",
+
+        "ERRORS AFTER INSTALLING THE MOD",
+        "- Error: Invalid key lengh - ",
+        "You started the game directly from the executable (omori.exe) and not through the "+
+        "link created by Steam (or through the game page). In both cases the solution is to start the game from Steam.\n\n",
+
+        "- Error: Invalid IV lengh - ",
+        "This error is caused by an unspecified error in the game files. We recommend that you"+
+        "reinstall the game, taking care first to make a backup of the \"save\" folder in \"Omori/www/\".\n\n",
+
+        "- Error: ENOENT: no such file or directory - ",
+        "Error caused by the lack of \"save\" folder"+
+        "folder inside the game files. Start the game once, then install the mod and it should run smoothly.\n\n",
+
+        "In case the information was not very clear or you need further support,"+
+        "are always available, either via discord or email to help you out!",
 
 ]
 

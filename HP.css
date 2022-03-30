@@ -44,7 +44,7 @@ body button{
 }
 
 .container{
-    margin: -130px auto 80px;
+    margin: -175px auto 80px;
     width: 80%;
     line-height: 1.5;
     background-color: white;
@@ -67,6 +67,45 @@ body button{
     background-color: white;
     width: min-content;
     margin-bottom: 90px;
+    transition: all 1s ease;
+}
+
+#div_summary{
+    width: min-content;
+    position: sticky;
+    top: 5px;
+}
+
+#fast-summary {
+    position: sticky;
+    min-width: 100px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    margin: -140px;
+    left: 10px;
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    transition: all 1s ease;
+}
+
+#fast-summary h3{
+    text-align: center;
+}
+
+.section-site{
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: all 1s ease;
+}
+
+.text-section{
+    text-decoration: none;
+    color: black;
     transition: all 1s ease;
 }
 
@@ -266,7 +305,6 @@ body button{
 }
 
 #intro h1{
-    /*letter-spacing: 15px;*/
     font-size: 20px;
 }
 
@@ -294,6 +332,16 @@ body button{
     padding: 0 10px 10px 10px;
     text-align: center;
     font-size: 22px;
+}
+
+.ans{
+    padding: 5px;
+    transition: all 1s ease;
+}
+
+.quest{
+    padding: 5px;
+    transition: all 1s ease;
 }
 
 
@@ -452,6 +500,11 @@ body button{
     font-size: 24px;
     text-align: center;
     transition: all 1s ease;
+    overflow-wrap: anywhere;
+}
+
+#email{
+    padding: 19px;
 }
 
 #box-contatti img{
@@ -493,6 +546,15 @@ body button{
     border-style: inset;
     border-width: 1px;
     width: 420px;
+}
+
+#faq_section{
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;
+    font-size: 22px;
+    margin: 50px auto;
+
 }
 
 #contact_people{
@@ -565,6 +627,19 @@ body button{
     margin: 5px 10px;
     flex-wrap: wrap-reverse;
     font-size: 22px;
+    flex-direction: column;
+}
+
+#prova{
+    /* max-width: 90px; */
+    display: flex;
+    align-items: stretch;
+    max-width: 100px;
+    /* display: initial; */
+    position: relative;
+    /* padding: 6px; */
+    top: -115px;
+    left: 117px;
     flex-direction: column;
 }
 
@@ -895,6 +970,13 @@ body button{
         top: -70px;
     }
 
+    #fast-summary {
+        min-width: 91px;
+        width: fit-content;
+        left: 3px;
+        padding: 2px;
+    }
+
     #lightbulb {
         max-height: 120px;
     }
@@ -911,11 +993,6 @@ body button{
     #twitter{
         top: 191px;
         left: 84%;
-    }
-
-    #discord img{
-      /*  position: relative;
-        bottom: 65px;*/
     }
 
     #telegram{
@@ -1054,6 +1131,18 @@ body button{
     #credit-site{
         position: relative;
         bottom: -115px;
+    }
+
+    #fast-summary {
+        min-width: 90px;
+        left: 1px;
+        padding: 1px;
+    }
+}
+
+@media ( max-width: 630px ) {
+    #fast-summary{
+        display: none;
     }
 }
 
