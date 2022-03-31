@@ -705,7 +705,7 @@ function text_array(lang) {
         "reinstallare il gioco, facendo prima attenzione a fare un backup della cartella \"save\" presente in \"Omori/www/\".\n\n" ,
 
         "- Errore: ENOENT, no such file or directory - " ,
-        "Errore causato dalla mancanza della cartella \"save" +
+        "Errore causato dalla mancanza della cartella \"save\"" +
         " all'interno dei file di gioco. Avvia il gioco una prima volta, poi installa la mod e il tutto dovrebbe procedere senza intoppi.\n\n" ,
 
         "Nel caso in cui le informazioni non siano state molto chiare o aveste bisogno di ulteriore supporto, " +
