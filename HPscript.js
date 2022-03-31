@@ -679,19 +679,18 @@ function text_array(lang) {
 
         /*FAQ*/
         "La mod è utilizzabile con la versione craccata del gioco?",
-        "No, la nostra mod non è compatibile con la versione pirata del gioco." +
+        "No, la nostra mod non è compatibile con la versione pirata del gioco. " +
         "Inoltre, non supportiamo in alcun modo la pirateria e non siamo responsabili di malfunzionamenti o danni arrecati alle vostre proprietà.\n\n" ,
 
         "L'utilizzo della mod altera o esclude l'ottenimento di trofei e obiettivi?" ,
         "No, questa mod non altera in nessun modo l'ottenimento dei trofei, esattamente come non corrompe i salvataggi o altro.\n\n" ,
 
-        "Posso usare altre mod insieme alla patch di traduzione?" ,
-        "Si possono usare altre mod insieme alla mod di traduzione italiana?"+
-        "Consigliamo di no. Visto che la nostra mod sostituisce la maggior parte dei file di gioco, potrebbero esserci"+
+        "Si possono usare altre mod insieme alla mod di traduzione italiana?",
+        "Consigliamo di no. Visto che la nostra mod sostituisce la maggior parte dei file di gioco, potrebbero esserci "+
         "parti non tradotte o altri problemi.\n\n",
 
-        "L'installer non funziona/mi da problemi, cosa posso fare?" ,
-        "Per qualsiasi malfunzionamento, si prega di contattarci alla nostra mail presente qua sotto, entrare nel nostro server discord," +
+        "L'installer non funziona/ da problemi, cosa posso fare?" ,
+        "Per qualsiasi malfunzionamento, si prega di contattarci alla nostra mail presente qua sotto, entrare nel nostro server discord, " +
         "oppure mandare una richiesta nel form google, facendo attenzione ad inserire la propria mail (Altrimenti non possiamo ricontattarvi!)\n\n" ,
 
 
@@ -702,14 +701,14 @@ function text_array(lang) {
         "collegamento reso creato da Steam (o tramite la pagina di gioco). In entrambi i casi la soluzione è avviare il gioco da Steam.\n\n" ,
 
         "- Errore: Invalid IV lengh - " ,
-        "Quest'errore è causato da un errore nei file di gioco non meglio specificato. Consigliamo di" +
+        "Quest'errore è causato da un errore nei file di gioco non meglio specificato. Consigliamo di " +
         "reinstallare il gioco, facendo prima attenzione a fare un backup della cartella \"save\" presente in \"Omori/www/\".\n\n" ,
 
         "- Errore: ENOENT, no such file or directory - " ,
         "Errore causato dalla mancanza della cartella \"save" +
-        "all'interno dei file di gioco. Avvia il gioco una prima volta, poi installa la mod e il tutto dovrebbe procedere senza intoppi.\n\n" ,
+        " all'interno dei file di gioco. Avvia il gioco una prima volta, poi installa la mod e il tutto dovrebbe procedere senza intoppi.\n\n" ,
 
-        "Nel caso in cui le informazioni non siano state molto chiare o aveste bisogno di ulteriore supporto," +
+        "Nel caso in cui le informazioni non siano state molto chiare o aveste bisogno di ulteriore supporto, " +
         "siano sempre disponibili, sia tramite discord, sia tramite email a darvi una mano!" ,
 
     ]
@@ -746,7 +745,7 @@ function text_array(lang) {
 
         /*FAQ*/
         "Is the mod usable with the cracked version of the game?",
-        "No, our mod is not compatible with the pirated version of the game." +
+        "No, our mod is not compatible with the pirated version of the game. " +
         "Also, we do not support piracy in any way and are not responsible for malfunctions or damage done to your property.\n\n",
 
         "Does using the mod alter or exclude getting trophies and achievements?",
@@ -758,7 +757,7 @@ function text_array(lang) {
         "untranslated parts or other problems.\n\n",
 
         "The installer doesn't work/gives me problems, what can I do?",
-        "For any malfunction, please contact us at our email below, join our discord server,"+
+        "For any malfunction, please contact us at our email below, join our discord server, "+
         "or send a request in the google form, making sure to enter your email (Otherwise we can not contact you!).\n\n",
 
         "ERRORS AFTER INSTALLING THE MOD",
@@ -767,14 +766,14 @@ function text_array(lang) {
         "link created by Steam (or through the game page). In both cases the solution is to start the game from Steam.\n\n",
 
         "- Error: Invalid IV lengh - ",
-        "This error is caused by an unspecified error in the game files. We recommend that you"+
+        "This error is caused by an unspecified error in the game files. We recommend that you "+
         "reinstall the game, taking care first to make a backup of the \"save\" folder in \"Omori/www/\".\n\n",
 
         "- Error: ENOENT: no such file or directory - ",
         "Error caused by the lack of \"save\" folder"+
-        "folder inside the game files. Start the game once, then install the mod and it should run smoothly.\n\n",
+        " inside the game files. Start the game once, then install the mod and it should run smoothly.\n\n",
 
-        "In case the information was not very clear or you need further support,"+
+        "In case the information was not very clear or you need further support, "+
         "are always available, either via discord or email to help you out!",
 
 ]
