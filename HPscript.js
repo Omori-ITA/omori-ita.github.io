@@ -657,11 +657,12 @@ function text_array(lang) {
         "Questo progetto non è assolutamente a fini di lucro, e il nostro è un team di fan volontari che desidera solamente rendere questo bellissimo gioco più accessibile ad un pubblico italiano.",
 
         /*QUA CI VA IL PROGETTO*/
-        "Benvenuti sul sito della traduzione italiana NON ufficiale di OMORI, videogioco di OMOCAT e disponibile su Steam. Abbiamo deciso di iniziare " +
-        "la traduzione di questo gioco perché l'unica localizzazione annunciata ufficialmente è stata quella giapponese, coreana e cinese. " +
-        "Ci sembrava opportuno permettere anche a chi non conosce l'inglese, di godere di questo splendido titolo. Per installare la traduzione, " +
-        "basta cliccare sul tasto sopra questa sezione e scegliere l'installer appropriato per il proprio sistema operativo. Se avete dubbi o problemi, " +
-        "potete accedere al server discord, oppure consultare la sezione supporto per maggiori delucidazioni!",
+        "Benvenuti sul sito della traduzione italiana NON ufficiale di OMORI, videogioco di OMOCAT disponibile su Steam. Abbiamo deciso di iniziare questo progetto perché sprovvisto di una localizzazione nella nostra lingua," +
+        " e ci sembra opportuno permettere anche a chi non conosce l'inglese di godere di questo splendido titolo. " +
+        "Per installare la traduzione basta cliccare sul tasto sopra questa sezione e scegliere l'installer appropriato per il " +
+        "proprio sistema operativo. Se avete dubbi o problemi, potete accedere al nostro server Discord o consultare la sezione supporto " +
+        "per maggiori delucidazioni!",
+
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
         "31/03/2022",
         "Oggi è stata rilasciata la sezione FAQ! Nel frattempo, anche dopo l'uscita della versione 1.25, " +
@@ -669,47 +670,49 @@ function text_array(lang) {
         "Grazie per i 2500+ download, ci state ripagando di tutti gli sforzi. <3",
         /*SEZIONE CONTATTI*/
         "Hai riscontrato dei problemi con l'installer, con il sito oppure hai degli errori da riportare? " +
-        "Clicca sul pulsante alla fine di questa sezione, per segnalare gli errori tramite un form di Google. " +
-        "Per richieste più formali, è disponibile anche la nostra email ufficiale:",
+        "Clicca sul pulsante alla fine di questa sezione per segnalare gli errori tramite un form di Google. " +
+        "Per richieste più formali è disponibile anche la nostra email ufficiale:",
 
         /*SEZIONE COPYRIGHT*/
-        "Tutti i marchi registrati, i nomi relativi a persone, cose o luoghi presenti in qualunque forma all'interno del sito appartengono ai legittimi proprietari (OMOCAT, LLC). " +
-        "Questa è una traduzione non ufficiale  e non a scopo di lucro, senza l'intenzione di snaturare o denigrare l'indirizzo originale del brand. " +
-        "In seguito a qualsiasi sollecitazione da parte del detentore della proprietà intellettuale siamo disposti ad entrare in contatto.",
+        "Tutti i marchi registrati e i nomi relativi a persone, cose o luoghi presenti in qualunque forma all'interno del sito appartengono" +
+        " ai legittimi proprietari (OMOCAT, LLC). Questa è una traduzione non ufficiale senza scopo di lucro. " +
+        "I suoi autori non intendono in alcun modo snaturare o denigrare l'indirizzo originale del brand e sono disposti " +
+        "ad entrare in contatto in seguito a qualsiasi sollecitazione da parte del detentore della proprietà intellettuale.",
 
         /*FAQ*/
-        "La mod è utilizzabile con la versione craccata del gioco?",
-        "No, la nostra mod non è compatibile con la versione pirata del gioco. " +
-        "Inoltre, non supportiamo in alcun modo la pirateria e non siamo responsabili di malfunzionamenti o danni arrecati alle vostre proprietà.\n\n" ,
+        "La mod è utilizzabile con versioni piratate del gioco?",
+        "No, la nostra mod è compatibile soltanto con il gioco acquistato regolarmente su Steam. " +
+        "Inoltre, non supportiamo in alcun modo la pirateria e non siamo responsabili di malfunzionamenti o danni arrecati alle vostre proprietà.\n\n",
 
-        "L'utilizzo della mod altera o esclude l'ottenimento di trofei e obiettivi?" ,
-        "No, questa mod non altera in nessun modo l'ottenimento dei trofei, esattamente come non corrompe i salvataggi o altro.\n\n" ,
+        "È possibile ottenere regolarmente gli achievement del gioco utilizzando la mod?" ,
+        "Sì, questa mod non altera in nessun modo l'ottenimento degli achievement, esattamente come non corrompe i salvataggi o altro.\n\n" ,
 
-        "Si possono usare altre mod insieme alla mod di traduzione italiana?",
-        "Consigliamo di no. Visto che la nostra mod sostituisce la maggior parte dei file di gioco, potrebbero esserci "+
-        "parti non tradotte o altri problemi.\n\n",
+        "Si possono usare altre mod insieme alla traduzione italiana?",
+        "Lo sconsigliamo: la nostra mod modifica molti file, quindi è probabile che causi conflitti indesiderati quando combinata con altre.\n\n",
 
-        "L'installer non funziona/ da problemi, cosa posso fare?" ,
-        "Per qualsiasi malfunzionamento, si prega di contattarci alla nostra mail presente qua sotto, entrare nel nostro server discord, " +
-        "oppure mandare una richiesta nel form google, facendo attenzione ad inserire la propria mail (Altrimenti non possiamo ricontattarvi!)\n\n" ,
+        "L'installer non funziona/dà problemi, cosa posso fare?" ,
+        "Per qualsiasi malfunzionamento vi preghiamo di contattarci alla nostra mail presente qua sotto, entrare nel nostro server Discord o mandare una richiesta tramite il form Google, " +
+        "facendo attenzione ad inserire la propria mail (altrimenti non possiamo ricontattarvi!)\n\n" ,
 
 
         "ERRORI DOPO AVER INSTALLATO LA MOD" ,
 
         "- Errore: Invalid key lengh - " ,
-        "È stato avviato il gioco direttamente dall'eseguibile (omori.exe) e non tramite il " +
-        "collegamento reso creato da Steam (o tramite la pagina di gioco). In entrambi i casi la soluzione è avviare il gioco da Steam.\n\n" ,
+        "È stato avviato il gioco direttamente dall'eseguibile (OMORI.exe) e non tramite il collegamento creato da Steam o " +
+        "dalla pagina di gioco. In entrambi i casi la soluzione è avviare il gioco da Steam.\n\n" ,
 
         "- Errore: Invalid IV lengh - " ,
-        "Quest'errore è causato da un errore nei file di gioco non meglio specificato. Consigliamo di " +
-        "reinstallare il gioco, facendo prima attenzione a fare un backup della cartella \"save\" presente in \"Omori/www/\".\n\n" ,
+        "Si è verificato un comportamento inaspettato. Siccome questo errore può avere diverse origini, consigliamo " +
+        "per andare sul sicuro di reinstallare il gioco dopo aver effettuato un backup della cartella \"save\" " +
+        "presente in \"OMORI/www/\". Per accedere alla cartella OMORI è possibile cliccare con il tasto destro del mouse sul " +
+        "gioco dalla libreria di Steam e selezionare l'opzione \"Sfoglia i file locali\".\n\n",
 
         "- Errore: ENOENT, no such file or directory - " ,
-        "Errore causato dalla mancanza della cartella \"save\"" +
-        " all'interno dei file di gioco. Avvia il gioco una prima volta, poi installa la mod e il tutto dovrebbe procedere senza intoppi.\n\n" ,
+        "La cartella \"save\" non è presente all'interno dei file di gioco. " +
+        "Per risolvere il problema avviate il gioco una prima volta, poi installate la mod.\n\n" ,
 
-        "Nel caso in cui le informazioni non siano state molto chiare o aveste bisogno di ulteriore supporto, " +
-        "siano sempre disponibili, sia tramite discord, sia tramite email a darvi una mano!" ,
+        "Nel caso in cui le informazioni non siano state molto chiare o aveste bisogno di ulteriore supporto siamo sempre disponibili," +
+        " sia tramite Discord che tramite email a darvi una mano!" ,
 
     ]
 
