@@ -9,7 +9,7 @@ function swap_lang(isModal) {
     document.getElementById('lang').innerText = lang;
     var text = text_array(lang);
 
-    const string_en = ["SUMMARY", "THE PROJECT", "NEWS", "WATCH THE TRAILER OF THE DEFINITIVE VERSION!", "SUPPORT", "What if I want to contact someone?", "SCREENSHOTS"]
+    const string_en = ["SUMMARY", "THE PROJECT", "NEWS", "WATCH THE TRAILER!", "SUPPORT", "What if I want to contact someone?", "SCREENSHOTS"]
     var winWidth = $(window).width();
 
     if(!isModal){
@@ -55,7 +55,7 @@ function swap_lang(isModal) {
         else{
 
             index = 0;
-            const string_it = ["SOMMARIO", "IL PROGETTO", "AGGIORNAMENTI", "GUARDA IL TRAILER DELLA VERSIONE DEFINITIVA!", "SUPPORTO", "E se volessi contattare qualcuno?", "SCREENSHOT"]
+            const string_it = ["SOMMARIO", "IL PROGETTO", "AGGIORNAMENTI", "GUARDA IL TRAILER!", "SUPPORTO", "E se volessi contattare qualcuno?", "SCREENSHOT"]
 
             document.getElementById("intro-title").innerText = " ";
             stringa = "BENVENUTO NELLO SPAZIO BIANCO";
@@ -697,11 +697,11 @@ function text_array(lang) {
 
         "ERRORI DOPO AVER INSTALLATO LA MOD" ,
 
-        "- Errore: Invalid key lengh - " ,
+        "- Errore: Invalid key lenght - " ,
         "È stato avviato il gioco direttamente dall'eseguibile (OMORI.exe) e non tramite il collegamento creato da Steam o " +
         "dalla pagina di gioco. In entrambi i casi la soluzione è avviare il gioco da Steam.\n\n" ,
 
-        "- Errore: Invalid IV lengh - " ,
+        "- Errore: Invalid IV lenght - " ,
         "Si è verificato un comportamento inaspettato. Siccome questo errore può avere diverse origini, consigliamo " +
         "per andare sul sicuro di reinstallare il gioco dopo aver effettuato un backup della cartella \"save\" " +
         "presente in \"OMORI/www/\". Per accedere alla cartella OMORI è possibile cliccare con il tasto destro del mouse sul " +
@@ -764,11 +764,11 @@ function text_array(lang) {
         "or send a request in the google form, making sure to enter your email (Otherwise we can not contact you!).\n\n",
 
         "ERRORS AFTER INSTALLING THE MOD",
-        "- Error: Invalid key lengh - ",
+        "- Error: Invalid key lenght - ",
         "You started the game directly from the executable (omori.exe) and not through the "+
         "link created by Steam (or through the game page). In both cases the solution is to start the game from Steam.\n\n",
 
-        "- Error: Invalid IV lengh - ",
+        "- Error: Invalid IV lenght - ",
         "This error is caused by an unspecified error in the game files. We recommend that you "+
         "reinstall the game, taking care first to make a backup of the \"save\" folder in \"Omori/www/\".\n\n",
 
