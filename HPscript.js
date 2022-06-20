@@ -84,7 +84,7 @@ function swap_lang(isModal) {
         /*Posizione 0 per disclaimer*/
 
         if(lang == "ENG"){
-            document.getElementById('confirm').innerText = "Understand";
+            document.getElementById('confirm').innerText = "I understand";
 
             $("#swap-lang-modal").css({
                 "background-image" : "url(res/italy.png)"
@@ -610,7 +610,7 @@ function darkMode(flag) {
 }
 
 function showDisclaimer() {
-    let saveChoice = localStorage.getItem('preference');
+    let saveChoice = localStorage.getItem('trans_alert');
 
     if(!saveChoice){
         /*Se preferenza non c'e', visualizza il modal*/
@@ -653,8 +653,11 @@ function text_array(lang) {
 
     ita_array = [
         /*QUA CI VA IL DISCLAIMER*/
-        "OMORI, con tutto il relativo materiale, è di proprietà di OMOCAT e del suo team. " +
-        "Questo progetto non è assolutamente a fini di lucro, e il nostro è un team di fan volontari che desidera solamente rendere questo bellissimo gioco più accessibile ad un pubblico italiano.",
+        "Le versioni console (Switch, PS4 e XBox) e la versione Gamepass non sono compatibili con la traduzione, " +
+        "quindi non sono disponibili in alcun modo in italiano. Ci scusiamo per il disagio.",
+
+/*        "OMORI, con tutto il relativo materiale, è di proprietà di OMOCAT e del suo team. " +
+        "Questo progetto non è assolutamente a fini di lucro, e il nostro è un team di fan volontari che desidera solamente rendere questo bellissimo gioco più accessibile ad un pubblico italiano.",*/
 
         /*QUA CI VA IL PROGETTO*/
         "Benvenuti sul sito della traduzione italiana NON ufficiale di OMORI, videogioco di OMOCAT disponibile su Steam. Abbiamo deciso di iniziare questo progetto perché sprovvisto di una localizzazione nella nostra lingua," +
@@ -720,8 +723,12 @@ function text_array(lang) {
     /*--ENG--*/
     eng_array = [
         /*QUA CI VA IL DISCLAIMER*/
-        "OMORI, with all its relative assets, is property of OMOCAT and her team. " +
-        "We are absolutely not profiting off of this project, and ours is a team of volunteer fans who just wish to make this beautiful game more accessible to an Italian public.",
+
+        "The console versions (Switch, PS4 and XBox) and the Gamepass version are not compatible with the translation, " +
+        "so they are not available in Italian in any way. We apologize for the inconvenience.",
+
+/*        "OMORI, with all its relative assets, is property of OMOCAT and her team. " +
+        "We are absolutely not profiting off of this project, and ours is a team of volunteer fans who just wish to make this beautiful game more accessible to an Italian public.",*/
 
         /*QUA CI VA IL PROGETTO*/
         "Welcome to the unofficial Italian translation website of OMORI, OMOCAT’s videogame, you can retrieve on Steam. " +
