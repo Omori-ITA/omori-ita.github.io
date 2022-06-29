@@ -34,11 +34,13 @@ function swap_lang(isModal) {
 
             for (let i = 0; i < 7; i++){
 
-                if (i != 3 && i != 5){
-                        console.log(document.getElementById("fast-summary").children.item(i).children.item(0))
+                if (i != 3 && i != 5 && i != 0){
                         if (document.getElementById("fast-summary").children.item(i).children.item(0) != null)
-                        document.getElementById("fast-summary").children.item(i).children.item(0).innerText = string_en[i]
-                    }
+                            document.getElementById("fast-summary").children.item(i).children.item(0).innerText = string_en[i];
+                    } else if(i == 0){
+                    document.getElementById("fast-summary").children.item(i).innerText = string_en[i];
+                }
+
             }
 
             document.getElementById('project-title').innerText = string_en[1];
@@ -62,11 +64,13 @@ function swap_lang(isModal) {
 
             for (let i = 0; i < 7; i++){
 
-                if (i != 3 && i != 5){
-                    console.log(document.getElementById("fast-summary").children.item(i).children.item(0))
+                if (i != 3 && i != 5 && i != 0){
                     if (document.getElementById("fast-summary").children.item(i).children.item(0) != null)
-                        document.getElementById("fast-summary").children.item(i).children.item(0).innerText = string_it[i]
+                        document.getElementById("fast-summary").children.item(i).children.item(0).innerText = string_it[i];
+                } else if(i == 0){
+                    document.getElementById("fast-summary").children.item(i).innerText = string_it[i];
                 }
+
             }
 
             document.getElementById('project-title').innerText = string_it[1];
