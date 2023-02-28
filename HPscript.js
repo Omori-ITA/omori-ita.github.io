@@ -671,10 +671,13 @@ function text_array(lang) {
         "per maggiori delucidazioni!",
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "31/03/2022",
-        "Oggi è stata rilasciata la sezione FAQ! Nel frattempo, anche dopo l'uscita della versione 1.25, " +
-        "siamo a lavoro per rilasciare quella che speriamo sia l'ultima versione, riveduta e corretta anche grazie al vostro contributo! " +
-        "Grazie per i 2500+ download, ci state ripagando di tutti gli sforzi. <3",
+        "01/03/2023",
+        "Grazie per il supporto continuo e aver scelto la nostra traduzione! " +
+        "Siamo lieti di annunciare l'uscita della nuova versione, la 1.3 che dovrebbe correggere tutti gli " +
+        "errori che ci avete segnalato con il tempo! Segnaliamo inoltre che siamo passati ad un altro tipo di " +
+        "programma per caricare la traduzione, più leggero e veloce! Tutto quello che dovete fare, è soltanto " +
+        "installare la nuova versione, ci penserà l'installer ad aggiornare il tutto! (Senza perdere i salvataggi, ovviamente)" ,
+
         /*SEZIONE CONTATTI*/
         "Hai riscontrato dei problemi con l'installer, con il sito oppure hai degli errori da riportare? " +
         "Clicca sul pulsante alla fine di questa sezione per segnalare gli errori tramite un form di Google. " +
@@ -742,10 +745,12 @@ function text_array(lang) {
 
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "31/03/2022",
-        "Today the FAQ section has been released! Meanwhile, even after the release of version 1.25, " +
-        "we are working to release what we hope will be the last version, revised and corrected also thanks to your contribution! " +
-        "Thanks for the 2500+ downloads, you are repaying us for all our efforts. <3",
+        "01/03/2023",
+        "Thank you for your continued support and for choosing our translation! " +
+        "We are pleased to announce the release of the new version, 1.3, which should correct " +
+        "all the errors you have reported to us over time! We also report that we have switched to a " +
+        "different type of programme to upload the translation, which is lighter and faster! All you have to do," +
+        " is just install the new version, the installer will take care of updating everything! (Without losing your saves, of course).",
 
     /*SEZIONE CONTATTI*/
         "Have you encountered problems with the installer, with the site or do you have any errors to report? " +
