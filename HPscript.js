@@ -615,8 +615,10 @@ function darkMode(flag) {
 
 function showDisclaimer() {
     let saveChoice = localStorage.getItem('trans_alert');
+    let warning_trans = localStorage.getItem('warning_trans');
 
-    if(!saveChoice){
+    //Qua in origine c'era !saveChoice
+    if(!warning_trans){
         /*Se preferenza non c'e', visualizza il modal*/
 
         $("#modal").css({
@@ -627,7 +629,6 @@ function showDisclaimer() {
             "pointer-events" : "all",
             "opacity": "1"
         });
-
     }
 }
 
@@ -657,11 +658,11 @@ function text_array(lang) {
 
     ita_array = [
         /*QUA CI VA IL DISCLAIMER*/
-        "Le versioni console (Switch, PS4 e XBox) e la versione Gamepass non sono compatibili con la traduzione, " +
-        "quindi non sono disponibili in alcun modo in italiano. Ci scusiamo per il disagio.",
+/*        "Le versioni console (Switch, PS4 e XBox) e la versione Gamepass non sono compatibili con la traduzione, " +
+        "quindi non sono disponibili in alcun modo in italiano. Ci scusiamo per il disagio.",*/
 
-/*        "OMORI, con tutto il relativo materiale, è di proprietà di OMOCAT e del suo team. " +
-        "Questo progetto non è assolutamente a fini di lucro, e il nostro è un team di fan volontari che desidera solamente rendere questo bellissimo gioco più accessibile ad un pubblico italiano.",*/
+        "La traduzione non è disponibile al momento a causa di importanti aggiornamenti. Sarà presto di nuovo funzionante, " +
+        "ma se non volete aspettare, potete entrare nel gruppo Discord o inviarci una mail a questo indirizzo: omoriitalianfantranslation@gmail.com",
 
         /*QUA CI VA IL PROGETTO*/
         "Benvenuti sul sito della traduzione italiana NON ufficiale di OMORI, videogioco di OMOCAT disponibile su Steam. Abbiamo deciso di iniziare questo progetto perché sprovvisto di una localizzazione nella nostra lingua," +
@@ -671,12 +672,9 @@ function text_array(lang) {
         "per maggiori delucidazioni!",
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "01/03/2023",
-        "Grazie per il supporto continuo e aver scelto la nostra traduzione! " +
-        "Siamo lieti di annunciare l'uscita della nuova versione, la 1.3 che dovrebbe correggere tutti gli " +
-        "errori che ci avete segnalato con il tempo! Segnaliamo inoltre che siamo passati ad un altro tipo di " +
-        "programma per caricare la traduzione, più leggero e veloce! Tutto quello che dovete fare, è soltanto " +
-        "installare la nuova versione, ci penserà l'installer ad aggiornare il tutto! (Senza perdere i salvataggi, ovviamente)" ,
+        "19/07/2023",
+        "La traduzione non è disponibile al momento a causa di importanti aggiornamenti. Sarà presto di nuovo funzionante, " +
+        "ma se non volete aspettare, potete entrare nel gruppo Discord o inviarci una mail a questo indirizzo: omoriitalianfantranslation@gmail.com" ,
 
         /*SEZIONE CONTATTI*/
         "Hai riscontrato dei problemi con l'installer, con il sito oppure hai degli errori da riportare? " +
@@ -731,8 +729,8 @@ function text_array(lang) {
     eng_array = [
         /*QUA CI VA IL DISCLAIMER*/
 
-        "The console versions (Switch, PS4 and XBox) and the Gamepass version are not compatible with the translation, " +
-        "so they are not available in Italian in any way. We apologize for the inconvenience.",
+        "The translation is currently not available due to significant updates. It should be operational again in a while, " +
+        "but if you don't want to wait, you can join our Discord group or send us an email at this address: omoriitalianfantranslation@gmail.com",
 
 /*        "OMORI, with all its relative assets, is property of OMOCAT and her team. " +
         "We are absolutely not profiting off of this project, and ours is a team of volunteer fans who just wish to make this beautiful game more accessible to an Italian public.",*/
@@ -745,12 +743,9 @@ function text_array(lang) {
 
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "01/03/2023",
-        "Thank you for your continued support and for choosing our translation! " +
-        "We are pleased to announce the release of the new version, 1.3, which should correct " +
-        "all the errors you have reported to us over time! We also report that we have switched to a " +
-        "different type of programme to upload the translation, which is lighter and faster! All you have to do," +
-        " is just install the new version, the installer will take care of updating everything! (Without losing your saves, of course).",
+        "19/07/2023",
+        "The translation is currently not available due to significant updates. It should be operational again in a while, " +
+        "but if you don't want to wait, you can join our Discord group or send us an email at this address: omoriitalianfantranslation@gmail.com",
 
     /*SEZIONE CONTATTI*/
         "Have you encountered problems with the installer, with the site or do you have any errors to report? " +
