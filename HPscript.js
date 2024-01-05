@@ -443,7 +443,6 @@ function darkMode(flag) {
 
         localStorage.setItem('darkMode', false);
 
-        /*DA CANCELLARE POI*/
         $(".modal-body").css({
             "background-color" : "white",
             "color" : "black"
@@ -668,9 +667,9 @@ function text_array(lang) {
         "per maggiori delucidazioni!",
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "21/07/2023",
-        "Stiamo lavorando ad una nuova versione della traduzione! Verrà resa disponibile quando completa, " +
-         "per adesso rimangono attivi solo i download della vecchia versione, la 1.35!",
+        "05/01/2024",
+        "Dopo circa 3 anni di sviluppo, siamo orgogliosi di annunciare l'uscita della versione 1.40 della nostra traduzione. Questo sarà l'ultimo aggiornamento, " +
+        "ma potete comunque segnalare problemi o altro. Grazie per averci sostenuto tutto questo tempo!",
 
         /*SEZIONE CONTATTI*/
         "Hai riscontrato dei problemi con l'installer, con il sito oppure hai degli errori da riportare? " +
@@ -736,9 +735,9 @@ function text_array(lang) {
 
 
         /*QUA CI VANNO LA DATA E POI LA NOVITA'*/
-        "21/07/2023",
-        "We are working on a new version of the translation! It will be made available when complete, " +
-        "for now only downloads of the old version, 1.35, remain active!",
+        "05/01/2024",
+        "After about 3 years of development, we are proud to announce the release of version 1.40 of our translation. " +
+        "This will be the last update, but you can still report problems or anything else. Thank you for supporting us all this time!",
 
     /*SEZIONE CONTATTI*/
         "Have you encountered problems with the installer, with the site or do you have any errors to report? " +
